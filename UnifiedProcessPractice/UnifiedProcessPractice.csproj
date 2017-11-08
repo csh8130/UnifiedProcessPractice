@@ -143,6 +143,30 @@
     <Compile Include="박상준\주문현황정보출력.designer.cs">
       <DependentUpon>주문현황정보출력.cs</DependentUpon>
     </Compile>
+    <Compile Include="손용록\직원 등록.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="손용록\직원 등록.designer.cs">
+      <DependentUpon>직원 등록.cs</DependentUpon>
+    </Compile>
+    <Compile Include="손용록\직원 삭제.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="손용록\직원 삭제.designer.cs">
+      <DependentUpon>직원 삭제.cs</DependentUpon>
+    </Compile>
+    <Compile Include="손용록\직원 수정.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="손용록\직원 수정.designer.cs">
+      <DependentUpon>직원 수정.cs</DependentUpon>
+    </Compile>
+    <Compile Include="손용록\직원 조회.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="손용록\직원 조회.designer.cs">
+      <DependentUpon>직원 조회.cs</DependentUpon>
+    </Compile>
     <Compile Include="최승혁\식자재 발주 조회.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -172,6 +196,12 @@
     </Compile>
     <Compile Include="권보성\회원정보조회.designer.cs">
       <DependentUpon>회원정보조회.cs</DependentUpon>
+    </Compile>
+    <Compile Include="손용록\회원 포인트 잔액 정보 조회.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="손용록\회원 포인트 잔액 정보 조회.designer.cs">
+      <DependentUpon>회원 포인트 잔액 정보 조회.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
@@ -227,6 +257,18 @@
     <EmbeddedResource Include="박상준\주문현황정보출력.resx">
       <DependentUpon>주문현황정보출력.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="손용록\직원 등록.resx">
+      <DependentUpon>직원 등록.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="손용록\직원 삭제.resx">
+      <DependentUpon>직원 삭제.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="손용록\직원 수정.resx">
+      <DependentUpon>직원 수정.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="손용록\직원 조회.resx">
+      <DependentUpon>직원 조회.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="최승혁\식자재 발주 조회.resx">
       <DependentUpon>식자재 발주 조회.cs</DependentUpon>
     </EmbeddedResource>
@@ -241,6 +283,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="권보성\회원정보조회.resx">
       <DependentUpon>회원정보조회.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="손용록\회원 포인트 잔액 정보 조회.resx">
+      <DependentUpon>회원 포인트 잔액 정보 조회.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="DatabaseDataSet.xsc">
       <DependentUpon>DatabaseDataSet.xsd</DependentUpon>

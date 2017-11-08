@@ -148,5 +148,45 @@ namespace UnifiedProcessPractice
             주문현황정보출력 a = new 주문현황정보출력();
             a.ShowDialog();
         }
+
+        private void button20_Click(object sender, EventArgs e)
+        {
+            splitContainer1.Panel2.Controls.Clear();
+            직원_등록 control = new 직원_등록();
+            splitContainer1.Panel2.Controls.Add(control);
+
+        }
+
+        private void button21_Click(object sender, EventArgs e)
+        {
+            splitContainer1.Panel2.Controls.Clear();
+            직원_삭제 control = new 직원_삭제();
+            splitContainer1.Panel2.Controls.Add(control);
+
+        }
+
+        private void button22_Click(object sender, EventArgs e)
+        {
+            splitContainer1.Panel2.Controls.Clear();
+            직원_수정 control = new 직원_수정();
+            splitContainer1.Panel2.Controls.Add(control);
+
+        }
+
+        private void button23_Click(object sender, EventArgs e)
+        {
+            splitContainer1.Panel2.Controls.Clear();
+            직원_조회 control = new 직원_조회();
+            splitContainer1.Panel2.Controls.Add(control);
+
+        }
+
+        private void button24_Click(object sender, EventArgs e)
+        {
+            splitContainer1.Panel2.Controls.Clear();
+            회원_포인트_잔액_정보_조회 control = new 회원_포인트_잔액_정보_조회();
+            splitContainer1.Panel2.Controls.Add(control);
+
+        }
     }
 }
