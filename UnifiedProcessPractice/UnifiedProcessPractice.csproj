@@ -101,6 +101,36 @@
     <Compile Include="박상준\예약정보출력.designer.cs">
       <DependentUpon>예약정보출력.cs</DependentUpon>
     </Compile>
+    <Compile Include="장해진\식자재입고정보등록.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="장해진\식자재입고정보등록.designer.cs">
+      <DependentUpon>식자재입고정보등록.cs</DependentUpon>
+    </Compile>
+    <Compile Include="장해진\식자재입고정보수정.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="장해진\식자재입고정보수정.designer.cs">
+      <DependentUpon>식자재입고정보수정.cs</DependentUpon>
+    </Compile>
+    <Compile Include="장해진\식자재입출고대장조회.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="장해진\식자재입출고대장조회.designer.cs">
+      <DependentUpon>식자재입출고대장조회.cs</DependentUpon>
+    </Compile>
+    <Compile Include="장해진\식자재출고정보등록.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="장해진\식자재출고정보등록.designer.cs">
+      <DependentUpon>식자재출고정보등록.cs</DependentUpon>
+    </Compile>
+    <Compile Include="장해진\식자재출고정보수정.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="장해진\식자재출고정보수정.designer.cs">
+      <DependentUpon>식자재출고정보수정.cs</DependentUpon>
+    </Compile>
     <Compile Include="이재용\식자재등록.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -235,6 +265,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="박상준\예약정보출력.resx">
       <DependentUpon>예약정보출력.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="장해진\식자재입고정보등록.resx">
+      <DependentUpon>식자재입고정보등록.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="장해진\식자재입고정보수정.resx">
+      <DependentUpon>식자재입고정보수정.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="장해진\식자재입출고대장조회.resx">
+      <DependentUpon>식자재입출고대장조회.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="장해진\식자재출고정보등록.resx">
+      <DependentUpon>식자재출고정보등록.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="장해진\식자재출고정보수정.resx">
+      <DependentUpon>식자재출고정보수정.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="이재용\식자재등록.resx">
       <DependentUpon>식자재등록.cs</DependentUpon>

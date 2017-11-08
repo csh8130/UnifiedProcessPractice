@@ -188,5 +188,40 @@ namespace UnifiedProcessPractice
             splitContainer1.Panel2.Controls.Add(control);
 
         }
+
+        private void button25_Click(object sender, EventArgs e)
+        {
+            splitContainer1.Panel2.Controls.Clear();
+            식자재입출고대장조회 form = new 식자재입출고대장조회();
+            splitContainer1.Panel2.Controls.Add(form);
+        }
+
+        private void button26_Click(object sender, EventArgs e)
+        {
+            splitContainer1.Panel2.Controls.Clear();
+            식자재입고정보등록 form = new 식자재입고정보등록();
+            splitContainer1.Panel2.Controls.Add(form);
+        }
+
+        private void button27_Click(object sender, EventArgs e)
+        {
+            splitContainer1.Panel2.Controls.Clear();
+            식자재입고정보수정 form = new 식자재입고정보수정();
+            splitContainer1.Panel2.Controls.Add(form);
+        }
+
+        private void button28_Click(object sender, EventArgs e)
+        {
+            splitContainer1.Panel2.Controls.Clear();
+            식자재출고정보등록 form = new 식자재출고정보등록();
+            splitContainer1.Panel2.Controls.Add(form);
+        }
+
+        private void button29_Click(object sender, EventArgs e)
+        {
+            splitContainer1.Panel2.Controls.Clear();
+            식자재출고정보수정 form = new 식자재출고정보수정();
+            splitContainer1.Panel2.Controls.Add(form);
+        }
     }
 }

@@ -29,6 +29,11 @@
         private void InitializeComponent()
         {
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.button24 = new System.Windows.Forms.Button();
+            this.button23 = new System.Windows.Forms.Button();
+            this.button22 = new System.Windows.Forms.Button();
+            this.button21 = new System.Windows.Forms.Button();
+            this.button20 = new System.Windows.Forms.Button();
             this.button19 = new System.Windows.Forms.Button();
             this.button16 = new System.Windows.Forms.Button();
             this.button18 = new System.Windows.Forms.Button();
@@ -50,11 +55,11 @@
             this.button0 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.button20 = new System.Windows.Forms.Button();
-            this.button21 = new System.Windows.Forms.Button();
-            this.button22 = new System.Windows.Forms.Button();
-            this.button23 = new System.Windows.Forms.Button();
-            this.button24 = new System.Windows.Forms.Button();
+            this.button25 = new System.Windows.Forms.Button();
+            this.button26 = new System.Windows.Forms.Button();
+            this.button27 = new System.Windows.Forms.Button();
+            this.button28 = new System.Windows.Forms.Button();
+            this.button29 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -69,6 +74,11 @@
             // 
             // splitContainer1.Panel1
             // 
+            this.splitContainer1.Panel1.Controls.Add(this.button29);
+            this.splitContainer1.Panel1.Controls.Add(this.button28);
+            this.splitContainer1.Panel1.Controls.Add(this.button27);
+            this.splitContainer1.Panel1.Controls.Add(this.button26);
+            this.splitContainer1.Panel1.Controls.Add(this.button25);
             this.splitContainer1.Panel1.Controls.Add(this.button24);
             this.splitContainer1.Panel1.Controls.Add(this.button23);
             this.splitContainer1.Panel1.Controls.Add(this.button22);
@@ -101,6 +111,56 @@
             this.splitContainer1.Size = new System.Drawing.Size(1158, 1053);
             this.splitContainer1.SplitterDistance = 200;
             this.splitContainer1.TabIndex = 0;
+            // 
+            // button24
+            // 
+            this.button24.Location = new System.Drawing.Point(24, 871);
+            this.button24.Name = "button24";
+            this.button24.Size = new System.Drawing.Size(162, 30);
+            this.button24.TabIndex = 18;
+            this.button24.Text = "회원 포인트 잔액 정보 조회";
+            this.button24.UseVisualStyleBackColor = true;
+            this.button24.Click += new System.EventHandler(this.button24_Click);
+            // 
+            // button23
+            // 
+            this.button23.Location = new System.Drawing.Point(35, 842);
+            this.button23.Name = "button23";
+            this.button23.Size = new System.Drawing.Size(75, 23);
+            this.button23.TabIndex = 17;
+            this.button23.Text = "직원조회";
+            this.button23.UseVisualStyleBackColor = true;
+            this.button23.Click += new System.EventHandler(this.button23_Click);
+            // 
+            // button22
+            // 
+            this.button22.Location = new System.Drawing.Point(37, 813);
+            this.button22.Name = "button22";
+            this.button22.Size = new System.Drawing.Size(75, 23);
+            this.button22.TabIndex = 16;
+            this.button22.Text = "직원수정";
+            this.button22.UseVisualStyleBackColor = true;
+            this.button22.Click += new System.EventHandler(this.button22_Click);
+            // 
+            // button21
+            // 
+            this.button21.Location = new System.Drawing.Point(37, 784);
+            this.button21.Name = "button21";
+            this.button21.Size = new System.Drawing.Size(75, 23);
+            this.button21.TabIndex = 15;
+            this.button21.Text = "직원삭제";
+            this.button21.UseVisualStyleBackColor = true;
+            this.button21.Click += new System.EventHandler(this.button21_Click);
+            // 
+            // button20
+            // 
+            this.button20.Location = new System.Drawing.Point(35, 755);
+            this.button20.Name = "button20";
+            this.button20.Size = new System.Drawing.Size(75, 23);
+            this.button20.TabIndex = 14;
+            this.button20.Text = "직원등록";
+            this.button20.UseVisualStyleBackColor = true;
+            this.button20.Click += new System.EventHandler(this.button20_Click);
             // 
             // button19
             // 
@@ -310,55 +370,55 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "This is Main Page";
             // 
-            // button20
+            // button25
             // 
-            this.button20.Location = new System.Drawing.Point(35, 755);
-            this.button20.Name = "button20";
-            this.button20.Size = new System.Drawing.Size(75, 23);
-            this.button20.TabIndex = 14;
-            this.button20.Text = "직원등록";
-            this.button20.UseVisualStyleBackColor = true;
-            this.button20.Click += new System.EventHandler(this.button20_Click);
+            this.button25.Location = new System.Drawing.Point(12, 907);
+            this.button25.Name = "button25";
+            this.button25.Size = new System.Drawing.Size(164, 23);
+            this.button25.TabIndex = 19;
+            this.button25.Text = "식자재입출고대장조회";
+            this.button25.UseVisualStyleBackColor = true;
+            this.button25.Click += new System.EventHandler(this.button25_Click);
             // 
-            // button21
+            // button26
             // 
-            this.button21.Location = new System.Drawing.Point(37, 784);
-            this.button21.Name = "button21";
-            this.button21.Size = new System.Drawing.Size(75, 23);
-            this.button21.TabIndex = 15;
-            this.button21.Text = "직원삭제";
-            this.button21.UseVisualStyleBackColor = true;
-            this.button21.Click += new System.EventHandler(this.button21_Click);
+            this.button26.Location = new System.Drawing.Point(12, 936);
+            this.button26.Name = "button26";
+            this.button26.Size = new System.Drawing.Size(164, 23);
+            this.button26.TabIndex = 20;
+            this.button26.Text = "식자재입고정보등록";
+            this.button26.UseVisualStyleBackColor = true;
+            this.button26.Click += new System.EventHandler(this.button26_Click);
             // 
-            // button22
+            // button27
             // 
-            this.button22.Location = new System.Drawing.Point(37, 813);
-            this.button22.Name = "button22";
-            this.button22.Size = new System.Drawing.Size(75, 23);
-            this.button22.TabIndex = 16;
-            this.button22.Text = "직원수정";
-            this.button22.UseVisualStyleBackColor = true;
-            this.button22.Click += new System.EventHandler(this.button22_Click);
+            this.button27.Location = new System.Drawing.Point(12, 965);
+            this.button27.Name = "button27";
+            this.button27.Size = new System.Drawing.Size(164, 23);
+            this.button27.TabIndex = 21;
+            this.button27.Text = "식자재입고정보수정";
+            this.button27.UseVisualStyleBackColor = true;
+            this.button27.Click += new System.EventHandler(this.button27_Click);
             // 
-            // button23
+            // button28
             // 
-            this.button23.Location = new System.Drawing.Point(35, 842);
-            this.button23.Name = "button23";
-            this.button23.Size = new System.Drawing.Size(75, 23);
-            this.button23.TabIndex = 17;
-            this.button23.Text = "직원조회";
-            this.button23.UseVisualStyleBackColor = true;
-            this.button23.Click += new System.EventHandler(this.button23_Click);
+            this.button28.Location = new System.Drawing.Point(12, 994);
+            this.button28.Name = "button28";
+            this.button28.Size = new System.Drawing.Size(164, 23);
+            this.button28.TabIndex = 22;
+            this.button28.Text = "식자재출고정보등록";
+            this.button28.UseVisualStyleBackColor = true;
+            this.button28.Click += new System.EventHandler(this.button28_Click);
             // 
-            // button24
+            // button29
             // 
-            this.button24.Location = new System.Drawing.Point(24, 871);
-            this.button24.Name = "button24";
-            this.button24.Size = new System.Drawing.Size(162, 30);
-            this.button24.TabIndex = 18;
-            this.button24.Text = "회원 포인트 잔액 정보 조회";
-            this.button24.UseVisualStyleBackColor = true;
-            this.button24.Click += new System.EventHandler(this.button24_Click);
+            this.button29.Location = new System.Drawing.Point(17, 1023);
+            this.button29.Name = "button29";
+            this.button29.Size = new System.Drawing.Size(159, 18);
+            this.button29.TabIndex = 23;
+            this.button29.Text = "식자재출고정보수정";
+            this.button29.UseVisualStyleBackColor = true;
+            this.button29.Click += new System.EventHandler(this.button29_Click);
             // 
             // Main
             // 
@@ -406,6 +466,11 @@
         private System.Windows.Forms.Button button22;
         private System.Windows.Forms.Button button21;
         private System.Windows.Forms.Button button20;
+        private System.Windows.Forms.Button button29;
+        private System.Windows.Forms.Button button28;
+        private System.Windows.Forms.Button button27;
+        private System.Windows.Forms.Button button26;
+        private System.Windows.Forms.Button button25;
     }
 }
 
