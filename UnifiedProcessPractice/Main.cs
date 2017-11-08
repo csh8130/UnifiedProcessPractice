@@ -79,5 +79,40 @@ namespace UnifiedProcessPractice
             공급업체조회 control = new 공급업체조회();
             splitContainer1.Panel2.Controls.Add(control);
         }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            splitContainer1.Panel2.Controls.Clear();
+            식자재등록 control = new 식자재등록();
+            splitContainer1.Panel2.Controls.Add(control);
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            splitContainer1.Panel2.Controls.Clear();
+            식자재수정 control = new 식자재수정();
+            splitContainer1.Panel2.Controls.Add(control);
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            splitContainer1.Panel2.Controls.Clear();
+            식자재삭제 control = new 식자재삭제();
+            splitContainer1.Panel2.Controls.Add(control);
+        }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            splitContainer1.Panel2.Controls.Clear();
+            식자재조회 control = new 식자재조회();
+            splitContainer1.Panel2.Controls.Add(control);
+        }
+
+        private void button14_Click(object sender, EventArgs e)
+        {
+            splitContainer1.Panel2.Controls.Clear();
+            식자재재고조사등록 control = new 식자재재고조사등록();
+            splitContainer1.Panel2.Controls.Add(control);
+        }
     }
 }
