@@ -60,6 +60,11 @@
             this.button0 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.button30 = new System.Windows.Forms.Button();
+            this.button31 = new System.Windows.Forms.Button();
+            this.button32 = new System.Windows.Forms.Button();
+            this.button33 = new System.Windows.Forms.Button();
+            this.button34 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -75,6 +80,11 @@
             // splitContainer1.Panel1
             // 
             this.splitContainer1.Panel1.AutoScroll = true;
+            this.splitContainer1.Panel1.Controls.Add(this.button34);
+            this.splitContainer1.Panel1.Controls.Add(this.button33);
+            this.splitContainer1.Panel1.Controls.Add(this.button32);
+            this.splitContainer1.Panel1.Controls.Add(this.button31);
+            this.splitContainer1.Panel1.Controls.Add(this.button30);
             this.splitContainer1.Panel1.Controls.Add(this.button29);
             this.splitContainer1.Panel1.Controls.Add(this.button28);
             this.splitContainer1.Panel1.Controls.Add(this.button27);
@@ -395,7 +405,7 @@
             // 
             // button0
             // 
-            this.button0.Location = new System.Drawing.Point(12, 277);
+            this.button0.Location = new System.Drawing.Point(12, 261);
             this.button0.Name = "button0";
             this.button0.Size = new System.Drawing.Size(164, 23);
             this.button0.TabIndex = 0;
@@ -405,7 +415,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(12, 304);
+            this.button1.Location = new System.Drawing.Point(12, 288);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(164, 23);
             this.button1.TabIndex = 0;
@@ -421,6 +431,56 @@
             this.label1.Size = new System.Drawing.Size(109, 12);
             this.label1.TabIndex = 0;
             this.label1.Text = "This is Main Page";
+            // 
+            // button30
+            // 
+            this.button30.Location = new System.Drawing.Point(12, 317);
+            this.button30.Name = "button30";
+            this.button30.Size = new System.Drawing.Size(164, 23);
+            this.button30.TabIndex = 24;
+            this.button30.Text = "식자재 발주 삭제";
+            this.button30.UseVisualStyleBackColor = true;
+            this.button30.Click += new System.EventHandler(this.button30_Click);
+            // 
+            // button31
+            // 
+            this.button31.Location = new System.Drawing.Point(12, 346);
+            this.button31.Name = "button31";
+            this.button31.Size = new System.Drawing.Size(164, 23);
+            this.button31.TabIndex = 24;
+            this.button31.Text = "식자재 반품 조회";
+            this.button31.UseVisualStyleBackColor = true;
+            this.button31.Click += new System.EventHandler(this.button30_Click);
+            // 
+            // button32
+            // 
+            this.button32.Location = new System.Drawing.Point(12, 375);
+            this.button32.Name = "button32";
+            this.button32.Size = new System.Drawing.Size(164, 23);
+            this.button32.TabIndex = 24;
+            this.button32.Text = "식자재 반품 등록";
+            this.button32.UseVisualStyleBackColor = true;
+            this.button32.Click += new System.EventHandler(this.button30_Click);
+            // 
+            // button33
+            // 
+            this.button33.Location = new System.Drawing.Point(12, 404);
+            this.button33.Name = "button33";
+            this.button33.Size = new System.Drawing.Size(164, 23);
+            this.button33.TabIndex = 24;
+            this.button33.Text = "식자재 반품 삭제";
+            this.button33.UseVisualStyleBackColor = true;
+            this.button33.Click += new System.EventHandler(this.button30_Click);
+            // 
+            // button34
+            // 
+            this.button34.Location = new System.Drawing.Point(12, 433);
+            this.button34.Name = "button34";
+            this.button34.Size = new System.Drawing.Size(164, 23);
+            this.button34.TabIndex = 24;
+            this.button34.Text = "식자재 반품 수정";
+            this.button34.UseVisualStyleBackColor = true;
+            this.button34.Click += new System.EventHandler(this.button30_Click);
             // 
             // Main
             // 
@@ -473,6 +533,11 @@
         private System.Windows.Forms.Button button27;
         private System.Windows.Forms.Button button26;
         private System.Windows.Forms.Button button25;
+        private System.Windows.Forms.Button button30;
+        private System.Windows.Forms.Button button34;
+        private System.Windows.Forms.Button button33;
+        private System.Windows.Forms.Button button32;
+        private System.Windows.Forms.Button button31;
     }
 }
 

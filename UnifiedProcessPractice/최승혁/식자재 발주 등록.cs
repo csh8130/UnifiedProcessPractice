@@ -17,14 +17,6 @@ namespace UnifiedProcessPractice
             InitializeComponent();
         }
 
-        private void purchaseOrderBindingNavigatorSaveItem_Click(object sender, EventArgs e)
-        {
-            this.Validate();
-            this.purchaseOrderBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.databaseDataSet);
-
-        }
-
         /*
         작성일시 : 2017-11-09
         설계자 : 최승혁
@@ -95,19 +87,7 @@ namespace UnifiedProcessPractice
                 id = id + 1; //기존의 id값에서 1증가시킨다
                 string insertId = "PO" + 0 + 0 + id;
 
-                int index = businessNameCombobox.SelectedIndex;
-                string businessName = businessNameCombobox.Items[index].ToString();
-
-                index = ingredientCombobox.SelectedIndex;
-                string ingredientNumber = ingredientCombobox.Items[index].ToString();
-
-                index = unitComboBox.SelectedIndex;
-                string unit = unitComboBox.Items[index].ToString();
-
-                index = unitComboBox.SelectedIndex;
-                string employeeNum = employeeNumCombobox.Items[index].ToString();
-
-                purchaseOrderTableAdapter.Insert(insertId, ingredientNumber, orderDateDateTimePicker.Value, unit, int.Parse(amountTextBox.Text), int.Parse(priceTextBox.Text), isEndedCheckBox.Checked, employeeNum, businessName);
+                purchaseOrderTableAdapter.Insert(insertId, ingredientCombobox.Text, orderDateDateTimePicker.Value, unitComboBox.Text, int.Parse(amountTextBox.Text), int.Parse(priceTextBox.Text), isEndedCheckBox.Checked, employeeNumCombobox.Text, businessNameCombobox.Text);
 
                 MessageBox.Show("발주번호: " + insertId + '\n' + "등록 완료되었습니다");
             }

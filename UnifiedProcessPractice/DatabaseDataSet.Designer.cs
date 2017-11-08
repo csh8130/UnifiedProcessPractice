@@ -18759,7 +18759,7 @@ WHERE  (Name LIKE '%' + ? + '%') OR
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.OleDb.OleDbCommand[2];
+            this._commandCollection = new global::System.Data.OleDb.OleDbCommand[3];
             this._commandCollection[0] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT PurchaseOrderNumber, IngredientNumber, OrderDate, Unit, Amount, Price, IsE" +
@@ -18772,6 +18772,13 @@ WHERE  (Name LIKE '%' + ? + '%') OR
                 "e LIKE \'%\' + ? + \'%\')";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("BusinessName", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "BusinessName", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[2] = new global::System.Data.OleDb.OleDbCommand();
+            this._commandCollection[2].Connection = this.Connection;
+            this._commandCollection[2].CommandText = "SELECT  PurchaseOrderNumber, IngredientNumber, OrderDate, Unit, Amount, Price, Is" +
+                "Ended, EmployeeNumber, BusinessName\r\nFROM     PurchaseOrder\r\nWHERE  (PurchaseOrd" +
+                "erNumber = ?)";
+            this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[2].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("PurchaseOrderNumber", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "PurchaseOrderNumber", global::System.Data.DataRowVersion.Current, false, null));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -18828,6 +18835,42 @@ WHERE  (Name LIKE '%' + ? + '%') OR
             }
             else {
                 this.Adapter.SelectCommand.Parameters[0].Value = ((string)(BusinessName));
+            }
+            DatabaseDataSet.PurchaseOrderDataTable dataTable = new DatabaseDataSet.PurchaseOrderDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillById(DatabaseDataSet.PurchaseOrderDataTable dataTable, string PurchaseOrderNumber) {
+            this.Adapter.SelectCommand = this.CommandCollection[2];
+            if ((PurchaseOrderNumber == null)) {
+                throw new global::System.ArgumentNullException("PurchaseOrderNumber");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(PurchaseOrderNumber));
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual DatabaseDataSet.PurchaseOrderDataTable GetDataById(string PurchaseOrderNumber) {
+            this.Adapter.SelectCommand = this.CommandCollection[2];
+            if ((PurchaseOrderNumber == null)) {
+                throw new global::System.ArgumentNullException("PurchaseOrderNumber");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(PurchaseOrderNumber));
             }
             DatabaseDataSet.PurchaseOrderDataTable dataTable = new DatabaseDataSet.PurchaseOrderDataTable();
             this.Adapter.Fill(dataTable);
