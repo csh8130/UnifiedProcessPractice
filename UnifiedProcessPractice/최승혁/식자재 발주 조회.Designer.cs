@@ -30,7 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.purchaseOrderDataGridView = new System.Windows.Forms.DataGridView();
-            this.selectButton = new System.Windows.Forms.Button();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -42,10 +41,15 @@
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.purchaseOrderBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.databaseDataSet = new UnifiedProcessPractice.DatabaseDataSet();
+            this.selectButton = new System.Windows.Forms.Button();
             this.purchaseOrderTableAdapter = new UnifiedProcessPractice.DatabaseDataSetTableAdapters.PurchaseOrderTableAdapter();
             this.tableAdapterManager = new UnifiedProcessPractice.DatabaseDataSetTableAdapters.TableAdapterManager();
             this.companyNameTextbox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.purchaseCombobox = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.purchaseOrderDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.purchaseOrderBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.databaseDataSet)).BeginInit();
@@ -68,22 +72,12 @@
             this.dataGridViewTextBoxColumn7,
             this.dataGridViewTextBoxColumn8});
             this.purchaseOrderDataGridView.DataSource = this.purchaseOrderBindingSource;
-            this.purchaseOrderDataGridView.Location = new System.Drawing.Point(33, 119);
+            this.purchaseOrderDataGridView.Location = new System.Drawing.Point(32, 228);
             this.purchaseOrderDataGridView.Name = "purchaseOrderDataGridView";
             this.purchaseOrderDataGridView.ReadOnly = true;
             this.purchaseOrderDataGridView.RowTemplate.Height = 23;
             this.purchaseOrderDataGridView.Size = new System.Drawing.Size(794, 232);
             this.purchaseOrderDataGridView.TabIndex = 1;
-            // 
-            // selectButton
-            // 
-            this.selectButton.Location = new System.Drawing.Point(723, 64);
-            this.selectButton.Name = "selectButton";
-            this.selectButton.Size = new System.Drawing.Size(81, 22);
-            this.selectButton.TabIndex = 2;
-            this.selectButton.Text = "조회";
-            this.selectButton.UseVisualStyleBackColor = true;
-            this.selectButton.Click += new System.EventHandler(this.selectButton_Click);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -158,6 +152,16 @@
             this.databaseDataSet.DataSetName = "DatabaseDataSet";
             this.databaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
+            // selectButton
+            // 
+            this.selectButton.Location = new System.Drawing.Point(723, 64);
+            this.selectButton.Name = "selectButton";
+            this.selectButton.Size = new System.Drawing.Size(81, 22);
+            this.selectButton.TabIndex = 2;
+            this.selectButton.Text = "조회";
+            this.selectButton.UseVisualStyleBackColor = true;
+            this.selectButton.Click += new System.EventHandler(this.selectButton_Click);
+            // 
             // purchaseOrderTableAdapter
             // 
             this.purchaseOrderTableAdapter.ClearBeforeFill = true;
@@ -203,16 +207,54 @@
             this.label1.TabIndex = 4;
             this.label1.Text = "발주업체명";
             // 
+            // purchaseCombobox
+            // 
+            this.purchaseCombobox.FormattingEnabled = true;
+            this.purchaseCombobox.Location = new System.Drawing.Point(137, 36);
+            this.purchaseCombobox.Name = "purchaseCombobox";
+            this.purchaseCombobox.Size = new System.Drawing.Size(121, 20);
+            this.purchaseCombobox.TabIndex = 5;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(78, 39);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(53, 12);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "발주번호";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(137, 65);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 20);
+            this.comboBox1.TabIndex = 7;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(78, 69);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(38, 12);
+            this.label3.TabIndex = 8;
+            this.label3.Text = "label3";
+            // 
             // 식자재_발주_조회
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.purchaseCombobox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.companyNameTextbox);
             this.Controls.Add(this.selectButton);
             this.Controls.Add(this.purchaseOrderDataGridView);
             this.Name = "식자재_발주_조회";
-            this.Size = new System.Drawing.Size(879, 393);
+            this.Size = new System.Drawing.Size(879, 484);
             this.Load += new System.EventHandler(this.식자재_발주_조회_Load);
             ((System.ComponentModel.ISupportInitialize)(this.purchaseOrderDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.purchaseOrderBindingSource)).EndInit();
@@ -241,5 +283,9 @@
         private System.Windows.Forms.Button selectButton;
         private System.Windows.Forms.TextBox companyNameTextbox;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox purchaseCombobox;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label3;
     }
 }

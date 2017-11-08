@@ -29,6 +29,14 @@ namespace UnifiedProcessPractice
         {
             //처음 시작시 전체 내용 조회
             purchaseOrderTableAdapter.Fill(databaseDataSet.PurchaseOrder);
+
+            //발주번호 콤보박스 전체 체워줌
+            DataTable t = purchaseOrderTableAdapter.GetData();
+
+            for(int i=0;i< t.Rows.Count;i++)
+            {
+                purchaseCombobox.Items.Add(t.Rows[i][0].ToString());
+            }
         }
 
         private void selectButton_Click(object sender, EventArgs e)

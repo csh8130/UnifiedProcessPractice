@@ -14835,6 +14835,23 @@ WHERE  (Name LIKE '%' + ? + '%') OR
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual DatabaseDataSet.IngredientDataTable GetDataByID(string IngredientNumber) {
+            this.Adapter.SelectCommand = this.CommandCollection[3];
+            if ((IngredientNumber == null)) {
+                throw new global::System.ArgumentNullException("IngredientNumber");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(IngredientNumber));
+            }
+            DatabaseDataSet.IngredientDataTable dataTable = new DatabaseDataSet.IngredientDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
         public virtual int FillByName(DatabaseDataSet.IngredientDataTable dataTable, string Name) {
             this.Adapter.SelectCommand = this.CommandCollection[4];
@@ -21047,7 +21064,7 @@ WHERE  (Name LIKE '%' + ? + '%') OR
             this._commandCollection[2] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[2].Connection = this.Connection;
             this._commandCollection[2].CommandText = "SELECT SARNumber, IngredientName, Amount, SignificantThing, IngredientNumber FROM" +
-                " SAR\r\n\nWHERE  (IngredientName LIKE \'%\' + ? + \'%\')";
+                " SAR\r\n\r\nWHERE  (IngredientName LIKE \'%\' + ? + \'%\')";
             this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[2].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IngredientName", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "IngredientName", global::System.Data.DataRowVersion.Current, false, null));
             this._commandCollection[3] = new global::System.Data.OleDb.OleDbCommand();

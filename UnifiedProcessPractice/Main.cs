@@ -223,5 +223,12 @@ namespace UnifiedProcessPractice
             식자재출고정보수정 form = new 식자재출고정보수정();
             splitContainer1.Panel2.Controls.Add(form);
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            splitContainer1.Panel2.Controls.Clear();
+            식자재_발주_등록 control = new 식자재_발주_등록();
+            splitContainer1.Panel2.Controls.Add(control);
+        }
     }
 }
