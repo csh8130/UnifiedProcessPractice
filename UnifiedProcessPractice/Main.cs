@@ -237,5 +237,19 @@ namespace UnifiedProcessPractice
             식자재_발주_삭제 control = new 식자재_발주_삭제();
             splitContainer1.Panel2.Controls.Add(control);
         }
+
+        private void button31_Click(object sender, EventArgs e)
+        {
+            splitContainer1.Panel2.Controls.Clear();
+            식자재_반품_조회 control = new 식자재_반품_조회();
+            splitContainer1.Panel2.Controls.Add(control);
+        }
+
+        private void button32_Click(object sender, EventArgs e)
+        {
+            splitContainer1.Panel2.Controls.Clear();
+            식자재_반품_등록 control = new 식자재_반품_등록();
+            splitContainer1.Panel2.Controls.Add(control);
+        }
     }
 }
