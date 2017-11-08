@@ -23,6 +23,7 @@ namespace UnifiedProcessPractice
         목적 : 기능 Load시 초기화를 위해 호출되는 기능들
         combobox에 항목을 미리 추가해 두기위한 코드가있다
         */
+
         private void 식자재_발주_삭제_Load(object sender, EventArgs e)
         {
             DataTable table = purchaseOrderTableAdapter.GetData(); //발주번호 combobox 추가
@@ -35,12 +36,17 @@ namespace UnifiedProcessPractice
         /*
         작성일시 : 2017-11-09
         설계자 : 최승혁
-        목적 : 발주번호 콤보 박스에서 항목 선택시 전체 select 쿼리 호출
+        목적 : 발주 삭제 쿼리 실행 (미완)
         */
         private void orderNumberCombobox_SelectedIndexChanged(object sender, EventArgs e)
         {
             purchaseOrderTableAdapter.FillById(databaseDataSet.PurchaseOrder,orderNumberCombobox.Text);
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            purchaseOrderTableAdapter.DeleteQueryById(orderNumberCombobox.Text);
+            MessageBox.Show("삭제 완료");
+        }
     }
 }

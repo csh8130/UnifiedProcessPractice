@@ -129,6 +129,7 @@
             this.button33.TabIndex = 24;
             this.button33.Text = "식자재 반품 삭제";
             this.button33.UseVisualStyleBackColor = true;
+            this.button33.Click += new System.EventHandler(this.button33_Click);
             // 
             // button32
             // 

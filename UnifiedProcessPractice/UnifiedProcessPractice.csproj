@@ -101,6 +101,12 @@
     <Compile Include="박상준\예약정보출력.designer.cs">
       <DependentUpon>예약정보출력.cs</DependentUpon>
     </Compile>
+    <Compile Include="최승혁\식자재 반품 삭제.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="최승혁\식자재 반품 삭제.Designer.cs">
+      <DependentUpon>식자재 반품 삭제.cs</DependentUpon>
+    </Compile>
     <Compile Include="최승혁\식자재 반품 등록.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -289,6 +295,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="박상준\예약정보출력.resx">
       <DependentUpon>예약정보출력.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="최승혁\식자재 반품 삭제.resx">
+      <DependentUpon>식자재 반품 삭제.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="최승혁\식자재 반품 등록.resx">
       <DependentUpon>식자재 반품 등록.cs</DependentUpon>

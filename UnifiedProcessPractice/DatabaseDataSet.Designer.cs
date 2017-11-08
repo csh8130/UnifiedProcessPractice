@@ -18759,7 +18759,7 @@ WHERE  (Name LIKE '%' + ? + '%') OR
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.OleDb.OleDbCommand[3];
+            this._commandCollection = new global::System.Data.OleDb.OleDbCommand[4];
             this._commandCollection[0] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT PurchaseOrderNumber, IngredientNumber, OrderDate, Unit, Amount, Price, IsE" +
@@ -18767,18 +18767,23 @@ WHERE  (Name LIKE '%' + ? + '%') OR
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "SELECT  PurchaseOrderNumber, IngredientNumber, OrderDate, Unit, Amount, Price, Is" +
-                "Ended, EmployeeNumber, BusinessName\r\nFROM     PurchaseOrder\r\nWHERE  (BusinessNam" +
-                "e LIKE \'%\' + ? + \'%\')";
+            this._commandCollection[1].CommandText = "DELETE FROM PurchaseOrder\r\nWHERE  (PurchaseOrderNumber = ?)";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[1].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("BusinessName", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "BusinessName", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("PurchaseOrderNumber", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "PurchaseOrderNumber", global::System.Data.DataRowVersion.Original, false, null));
             this._commandCollection[2] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[2].Connection = this.Connection;
             this._commandCollection[2].CommandText = "SELECT  PurchaseOrderNumber, IngredientNumber, OrderDate, Unit, Amount, Price, Is" +
+                "Ended, EmployeeNumber, BusinessName\r\nFROM     PurchaseOrder\r\nWHERE  (BusinessNam" +
+                "e LIKE \'%\' + ? + \'%\')";
+            this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[2].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("BusinessName", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "BusinessName", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[3] = new global::System.Data.OleDb.OleDbCommand();
+            this._commandCollection[3].Connection = this.Connection;
+            this._commandCollection[3].CommandText = "SELECT  PurchaseOrderNumber, IngredientNumber, OrderDate, Unit, Amount, Price, Is" +
                 "Ended, EmployeeNumber, BusinessName\r\nFROM     PurchaseOrder\r\nWHERE  (PurchaseOrd" +
                 "erNumber = ?)";
-            this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[2].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("PurchaseOrderNumber", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "PurchaseOrderNumber", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[3].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("PurchaseOrderNumber", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "PurchaseOrderNumber", global::System.Data.DataRowVersion.Current, false, null));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -18810,7 +18815,7 @@ WHERE  (Name LIKE '%' + ? + '%') OR
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
         public virtual int FillByCompanyName(DatabaseDataSet.PurchaseOrderDataTable dataTable, string BusinessName) {
-            this.Adapter.SelectCommand = this.CommandCollection[1];
+            this.Adapter.SelectCommand = this.CommandCollection[2];
             if ((BusinessName == null)) {
                 this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
@@ -18829,7 +18834,7 @@ WHERE  (Name LIKE '%' + ? + '%') OR
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
         public virtual DatabaseDataSet.PurchaseOrderDataTable GetDataByCompanyName(string BusinessName) {
-            this.Adapter.SelectCommand = this.CommandCollection[1];
+            this.Adapter.SelectCommand = this.CommandCollection[2];
             if ((BusinessName == null)) {
                 this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
@@ -18846,7 +18851,7 @@ WHERE  (Name LIKE '%' + ? + '%') OR
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
         public virtual int FillById(DatabaseDataSet.PurchaseOrderDataTable dataTable, string PurchaseOrderNumber) {
-            this.Adapter.SelectCommand = this.CommandCollection[2];
+            this.Adapter.SelectCommand = this.CommandCollection[3];
             if ((PurchaseOrderNumber == null)) {
                 throw new global::System.ArgumentNullException("PurchaseOrderNumber");
             }
@@ -18865,7 +18870,7 @@ WHERE  (Name LIKE '%' + ? + '%') OR
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
         public virtual DatabaseDataSet.PurchaseOrderDataTable GetDataById(string PurchaseOrderNumber) {
-            this.Adapter.SelectCommand = this.CommandCollection[2];
+            this.Adapter.SelectCommand = this.CommandCollection[3];
             if ((PurchaseOrderNumber == null)) {
                 throw new global::System.ArgumentNullException("PurchaseOrderNumber");
             }
@@ -19236,6 +19241,35 @@ WHERE  (Name LIKE '%' + ? + '%') OR
                     string Original_EmployeeNumber, 
                     string Original_BusinessName) {
             return this.Update(Original_PurchaseOrderNumber, IngredientNumber, OrderDate, Unit, Amount, Price, IsEnded, EmployeeNumber, BusinessName, Original_PurchaseOrderNumber, Original_IngredientNumber, Original_OrderDate, Original_Unit, Original_Amount, Original_Price, Original_IsEnded, Original_EmployeeNumber, Original_BusinessName);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, false)]
+        public virtual int DeleteQueryById(string PurchaseOrderNumber) {
+            global::System.Data.OleDb.OleDbCommand command = this.CommandCollection[1];
+            if ((PurchaseOrderNumber == null)) {
+                throw new global::System.ArgumentNullException("PurchaseOrderNumber");
+            }
+            else {
+                command.Parameters[0].Value = ((string)(PurchaseOrderNumber));
+            }
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            int returnValue;
+            try {
+                returnValue = command.ExecuteNonQuery();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            return returnValue;
         }
     }
     
@@ -20598,7 +20632,7 @@ WHERE  (Name LIKE '%' + ? + '%') OR
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.OleDb.OleDbCommand[2];
+            this._commandCollection = new global::System.Data.OleDb.OleDbCommand[3];
             this._commandCollection[0] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT ReturnNumber, IngredientName, SupplyDate, Reason, ReturnDate, IsEnded, Pur" +
@@ -20606,10 +20640,15 @@ WHERE  (Name LIKE '%' + ? + '%') OR
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "SELECT  ReturnNumber, IngredientName, SupplyDate, Reason, ReturnDate, IsEnded, Pu" +
-                "rchaseOrderNumber, IngredientNumber\r\nFROM     Return\r\nWHERE  (ReturnNumber = ?)";
+            this._commandCollection[1].CommandText = "DELETE FROM Return\r\nWHERE  (ReturnNumber = ?)";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[1].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("ReturnNumber", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ReturnNumber", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("ReturnNumber", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ReturnNumber", global::System.Data.DataRowVersion.Original, false, null));
+            this._commandCollection[2] = new global::System.Data.OleDb.OleDbCommand();
+            this._commandCollection[2].Connection = this.Connection;
+            this._commandCollection[2].CommandText = "SELECT  ReturnNumber, IngredientName, SupplyDate, Reason, ReturnDate, IsEnded, Pu" +
+                "rchaseOrderNumber, IngredientNumber\r\nFROM     Return\r\nWHERE  (ReturnNumber = ?)";
+            this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[2].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("ReturnNumber", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ReturnNumber", global::System.Data.DataRowVersion.Current, false, null));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -20641,7 +20680,7 @@ WHERE  (Name LIKE '%' + ? + '%') OR
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
         public virtual int FillById(DatabaseDataSet.ReturnDataTable dataTable, string ReturnNumber) {
-            this.Adapter.SelectCommand = this.CommandCollection[1];
+            this.Adapter.SelectCommand = this.CommandCollection[2];
             if ((ReturnNumber == null)) {
                 throw new global::System.ArgumentNullException("ReturnNumber");
             }
@@ -20660,7 +20699,7 @@ WHERE  (Name LIKE '%' + ? + '%') OR
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
         public virtual DatabaseDataSet.ReturnDataTable GetDataById(string ReturnNumber) {
-            this.Adapter.SelectCommand = this.CommandCollection[1];
+            this.Adapter.SelectCommand = this.CommandCollection[2];
             if ((ReturnNumber == null)) {
                 throw new global::System.ArgumentNullException("ReturnNumber");
             }
@@ -20952,6 +20991,35 @@ WHERE  (Name LIKE '%' + ? + '%') OR
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
         public virtual int Update(string IngredientName, global::System.Nullable<global::System.DateTime> SupplyDate, string Reason, global::System.Nullable<global::System.DateTime> ReturnDate, bool IsEnded, string PurchaseOrderNumber, string IngredientNumber, string Original_ReturnNumber, string Original_IngredientName, global::System.Nullable<global::System.DateTime> Original_SupplyDate, global::System.Nullable<global::System.DateTime> Original_ReturnDate, bool Original_IsEnded, string Original_PurchaseOrderNumber, string Original_IngredientNumber) {
             return this.Update(Original_ReturnNumber, IngredientName, SupplyDate, Reason, ReturnDate, IsEnded, PurchaseOrderNumber, IngredientNumber, Original_ReturnNumber, Original_IngredientName, Original_SupplyDate, Original_ReturnDate, Original_IsEnded, Original_PurchaseOrderNumber, Original_IngredientNumber);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, false)]
+        public virtual int DeleteQueryById(string ReturnNumber) {
+            global::System.Data.OleDb.OleDbCommand command = this.CommandCollection[1];
+            if ((ReturnNumber == null)) {
+                throw new global::System.ArgumentNullException("ReturnNumber");
+            }
+            else {
+                command.Parameters[0].Value = ((string)(ReturnNumber));
+            }
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            int returnValue;
+            try {
+                returnValue = command.ExecuteNonQuery();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            return returnValue;
         }
     }
     

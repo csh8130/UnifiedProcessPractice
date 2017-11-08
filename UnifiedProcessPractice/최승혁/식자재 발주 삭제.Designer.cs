@@ -83,6 +83,69 @@
             ingredientNumberLabel.TabIndex = 3;
             ingredientNumberLabel.Text = "식재자 번호:";
             // 
+            // orderDateLabel
+            // 
+            orderDateLabel.AutoSize = true;
+            orderDateLabel.Location = new System.Drawing.Point(75, 105);
+            orderDateLabel.Name = "orderDateLabel";
+            orderDateLabel.Size = new System.Drawing.Size(57, 12);
+            orderDateLabel.TabIndex = 21;
+            orderDateLabel.Text = "주문일시:";
+            // 
+            // unitLabel
+            // 
+            unitLabel.AutoSize = true;
+            unitLabel.Location = new System.Drawing.Point(75, 131);
+            unitLabel.Name = "unitLabel";
+            unitLabel.Size = new System.Drawing.Size(33, 12);
+            unitLabel.TabIndex = 22;
+            unitLabel.Text = "단위:";
+            // 
+            // amountLabel
+            // 
+            amountLabel.AutoSize = true;
+            amountLabel.Location = new System.Drawing.Point(75, 158);
+            amountLabel.Name = "amountLabel";
+            amountLabel.Size = new System.Drawing.Size(21, 12);
+            amountLabel.TabIndex = 23;
+            amountLabel.Text = "양:";
+            // 
+            // priceLabel
+            // 
+            priceLabel.AutoSize = true;
+            priceLabel.Location = new System.Drawing.Point(75, 185);
+            priceLabel.Name = "priceLabel";
+            priceLabel.Size = new System.Drawing.Size(59, 12);
+            priceLabel.TabIndex = 24;
+            priceLabel.Text = "가격 (원):";
+            // 
+            // isEndedLabel
+            // 
+            isEndedLabel.AutoSize = true;
+            isEndedLabel.Location = new System.Drawing.Point(75, 214);
+            isEndedLabel.Name = "isEndedLabel";
+            isEndedLabel.Size = new System.Drawing.Size(89, 12);
+            isEndedLabel.TabIndex = 25;
+            isEndedLabel.Text = "발주 확정 여부:";
+            // 
+            // employeeNumberLabel
+            // 
+            employeeNumberLabel.AutoSize = true;
+            employeeNumberLabel.Location = new System.Drawing.Point(75, 242);
+            employeeNumberLabel.Name = "employeeNumberLabel";
+            employeeNumberLabel.Size = new System.Drawing.Size(61, 12);
+            employeeNumberLabel.TabIndex = 26;
+            employeeNumberLabel.Text = "직원 번호:";
+            // 
+            // businessNameLabel
+            // 
+            businessNameLabel.AutoSize = true;
+            businessNameLabel.Location = new System.Drawing.Point(75, 269);
+            businessNameLabel.Name = "businessNameLabel";
+            businessNameLabel.Size = new System.Drawing.Size(73, 12);
+            businessNameLabel.TabIndex = 27;
+            businessNameLabel.Text = "공급업체 명:";
+            // 
             // databaseDataSet
             // 
             this.databaseDataSet.DataSetName = "DatabaseDataSet";
@@ -212,69 +275,7 @@
             this.button1.TabIndex = 20;
             this.button1.Text = "삭제";
             this.button1.UseVisualStyleBackColor = true;
-            // 
-            // orderDateLabel
-            // 
-            orderDateLabel.AutoSize = true;
-            orderDateLabel.Location = new System.Drawing.Point(75, 105);
-            orderDateLabel.Name = "orderDateLabel";
-            orderDateLabel.Size = new System.Drawing.Size(57, 12);
-            orderDateLabel.TabIndex = 21;
-            orderDateLabel.Text = "주문일시:";
-            // 
-            // unitLabel
-            // 
-            unitLabel.AutoSize = true;
-            unitLabel.Location = new System.Drawing.Point(75, 131);
-            unitLabel.Name = "unitLabel";
-            unitLabel.Size = new System.Drawing.Size(33, 12);
-            unitLabel.TabIndex = 22;
-            unitLabel.Text = "단위:";
-            // 
-            // amountLabel
-            // 
-            amountLabel.AutoSize = true;
-            amountLabel.Location = new System.Drawing.Point(75, 158);
-            amountLabel.Name = "amountLabel";
-            amountLabel.Size = new System.Drawing.Size(21, 12);
-            amountLabel.TabIndex = 23;
-            amountLabel.Text = "양:";
-            // 
-            // priceLabel
-            // 
-            priceLabel.AutoSize = true;
-            priceLabel.Location = new System.Drawing.Point(75, 185);
-            priceLabel.Name = "priceLabel";
-            priceLabel.Size = new System.Drawing.Size(59, 12);
-            priceLabel.TabIndex = 24;
-            priceLabel.Text = "가격 (원):";
-            // 
-            // isEndedLabel
-            // 
-            isEndedLabel.AutoSize = true;
-            isEndedLabel.Location = new System.Drawing.Point(75, 214);
-            isEndedLabel.Name = "isEndedLabel";
-            isEndedLabel.Size = new System.Drawing.Size(89, 12);
-            isEndedLabel.TabIndex = 25;
-            isEndedLabel.Text = "발주 확정 여부:";
-            // 
-            // employeeNumberLabel
-            // 
-            employeeNumberLabel.AutoSize = true;
-            employeeNumberLabel.Location = new System.Drawing.Point(75, 242);
-            employeeNumberLabel.Name = "employeeNumberLabel";
-            employeeNumberLabel.Size = new System.Drawing.Size(61, 12);
-            employeeNumberLabel.TabIndex = 26;
-            employeeNumberLabel.Text = "직원 번호:";
-            // 
-            // businessNameLabel
-            // 
-            businessNameLabel.AutoSize = true;
-            businessNameLabel.Location = new System.Drawing.Point(75, 269);
-            businessNameLabel.Name = "businessNameLabel";
-            businessNameLabel.Size = new System.Drawing.Size(73, 12);
-            businessNameLabel.TabIndex = 27;
-            businessNameLabel.Text = "공급업체 명:";
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // 식자재_발주_삭제
             // 
