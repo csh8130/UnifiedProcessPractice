@@ -114,5 +114,39 @@ namespace UnifiedProcessPractice
             식자재재고조사등록 control = new 식자재재고조사등록();
             splitContainer1.Panel2.Controls.Add(control);
         }
+
+        private void button15_Click(object sender, EventArgs e)
+        {
+            splitContainer1.Panel2.Controls.Clear();
+            예약정보등록 control = new 예약정보등록();
+            splitContainer1.Panel2.Controls.Add(control);
+        }
+
+        private void button16_Click(object sender, EventArgs e)
+        {
+            splitContainer1.Panel2.Controls.Clear();
+            예약정보조회 control = new 예약정보조회();
+            splitContainer1.Panel2.Controls.Add(control);
+        }
+
+        private void button17_Click(object sender, EventArgs e)
+        {
+            splitContainer1.Panel2.Controls.Clear();
+            주문정보조회 control = new 주문정보조회();
+            splitContainer1.Panel2.Controls.Add(control);
+
+        }
+
+        private void button18_Click(object sender, EventArgs e)
+        {
+            예약정보출력 a = new 예약정보출력();
+            a.ShowDialog();
+        }
+
+        private void button19_Click(object sender, EventArgs e)
+        {
+            주문현황정보출력 a = new 주문현황정보출력();
+            a.ShowDialog();
+        }
     }
 }

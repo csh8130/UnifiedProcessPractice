@@ -45,6 +45,11 @@
             this.button0 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.button15 = new System.Windows.Forms.Button();
+            this.button16 = new System.Windows.Forms.Button();
+            this.button17 = new System.Windows.Forms.Button();
+            this.button18 = new System.Windows.Forms.Button();
+            this.button19 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -59,6 +64,11 @@
             // 
             // splitContainer1.Panel1
             // 
+            this.splitContainer1.Panel1.Controls.Add(this.button19);
+            this.splitContainer1.Panel1.Controls.Add(this.button16);
+            this.splitContainer1.Panel1.Controls.Add(this.button18);
+            this.splitContainer1.Panel1.Controls.Add(this.button17);
+            this.splitContainer1.Panel1.Controls.Add(this.button15);
             this.splitContainer1.Panel1.Controls.Add(this.button14);
             this.splitContainer1.Panel1.Controls.Add(this.button13);
             this.splitContainer1.Panel1.Controls.Add(this.button12);
@@ -78,7 +88,7 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.label1);
-            this.splitContainer1.Size = new System.Drawing.Size(1158, 581);
+            this.splitContainer1.Size = new System.Drawing.Size(1158, 773);
             this.splitContainer1.SplitterDistance = 200;
             this.splitContainer1.TabIndex = 0;
             // 
@@ -240,11 +250,61 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "This is Main Page";
             // 
+            // button15
+            // 
+            this.button15.Location = new System.Drawing.Point(24, 552);
+            this.button15.Name = "button15";
+            this.button15.Size = new System.Drawing.Size(137, 23);
+            this.button15.TabIndex = 1;
+            this.button15.Text = "예약정보등록";
+            this.button15.UseVisualStyleBackColor = true;
+            this.button15.Click += new System.EventHandler(this.button15_Click);
+            // 
+            // button16
+            // 
+            this.button16.Location = new System.Drawing.Point(24, 596);
+            this.button16.Name = "button16";
+            this.button16.Size = new System.Drawing.Size(137, 36);
+            this.button16.TabIndex = 1;
+            this.button16.Text = "예약정보조회";
+            this.button16.UseVisualStyleBackColor = true;
+            this.button16.Click += new System.EventHandler(this.button16_Click);
+            // 
+            // button17
+            // 
+            this.button17.Location = new System.Drawing.Point(24, 638);
+            this.button17.Name = "button17";
+            this.button17.Size = new System.Drawing.Size(88, 38);
+            this.button17.TabIndex = 2;
+            this.button17.Text = "주문정보조회";
+            this.button17.UseVisualStyleBackColor = true;
+            this.button17.Click += new System.EventHandler(this.button17_Click);
+            // 
+            // button18
+            // 
+            this.button18.Location = new System.Drawing.Point(24, 682);
+            this.button18.Name = "button18";
+            this.button18.Size = new System.Drawing.Size(88, 23);
+            this.button18.TabIndex = 1;
+            this.button18.Text = "예약정보출력";
+            this.button18.UseVisualStyleBackColor = true;
+            this.button18.Click += new System.EventHandler(this.button18_Click);
+            // 
+            // button19
+            // 
+            this.button19.Location = new System.Drawing.Point(24, 711);
+            this.button19.Name = "button19";
+            this.button19.Size = new System.Drawing.Size(88, 23);
+            this.button19.TabIndex = 2;
+            this.button19.Text = "주문현황정보출력";
+            this.button19.UseVisualStyleBackColor = true;
+            this.button19.Click += new System.EventHandler(this.button19_Click);
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1158, 581);
+            this.ClientSize = new System.Drawing.Size(1158, 773);
             this.Controls.Add(this.splitContainer1);
             this.Name = "Main";
             this.Text = "메인화면";
@@ -276,6 +336,11 @@
         private System.Windows.Forms.Button button12;
         private System.Windows.Forms.Button button11;
         private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Button button16;
+        private System.Windows.Forms.Button button17;
+        private System.Windows.Forms.Button button15;
+        private System.Windows.Forms.Button button19;
+        private System.Windows.Forms.Button button18;
     }
 }
 

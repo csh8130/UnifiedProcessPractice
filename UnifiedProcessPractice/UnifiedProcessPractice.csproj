@@ -83,6 +83,24 @@
     <Compile Include="권보성\공급업체조회.designer.cs">
       <DependentUpon>공급업체조회.cs</DependentUpon>
     </Compile>
+    <Compile Include="박상준\예약정보등록.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="박상준\예약정보등록.designer.cs">
+      <DependentUpon>예약정보등록.cs</DependentUpon>
+    </Compile>
+    <Compile Include="박상준\예약정보조회.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="박상준\예약정보조회.designer.cs">
+      <DependentUpon>예약정보조회.cs</DependentUpon>
+    </Compile>
+    <Compile Include="박상준\예약정보출력.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="박상준\예약정보출력.designer.cs">
+      <DependentUpon>예약정보출력.cs</DependentUpon>
+    </Compile>
     <Compile Include="이재용\식자재등록.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -112,6 +130,18 @@
     </Compile>
     <Compile Include="이재용\식자재조회.designer.cs">
       <DependentUpon>식자재조회.cs</DependentUpon>
+    </Compile>
+    <Compile Include="박상준\주문정보조회.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="박상준\주문정보조회.designer.cs">
+      <DependentUpon>주문정보조회.cs</DependentUpon>
+    </Compile>
+    <Compile Include="박상준\주문현황정보출력.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="박상준\주문현황정보출력.designer.cs">
+      <DependentUpon>주문현황정보출력.cs</DependentUpon>
     </Compile>
     <Compile Include="최승혁\식자재 발주 조회.cs">
       <SubType>UserControl</SubType>
@@ -167,6 +197,15 @@
     <EmbeddedResource Include="권보성\공급업체조회.resx">
       <DependentUpon>공급업체조회.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="박상준\예약정보등록.resx">
+      <DependentUpon>예약정보등록.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="박상준\예약정보조회.resx">
+      <DependentUpon>예약정보조회.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="박상준\예약정보출력.resx">
+      <DependentUpon>예약정보출력.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="이재용\식자재등록.resx">
       <DependentUpon>식자재등록.cs</DependentUpon>
     </EmbeddedResource>
@@ -181,6 +220,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="이재용\식자재조회.resx">
       <DependentUpon>식자재조회.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="박상준\주문정보조회.resx">
+      <DependentUpon>주문정보조회.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="박상준\주문현황정보출력.resx">
+      <DependentUpon>주문현황정보출력.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="최승혁\식자재 발주 조회.resx">
       <DependentUpon>식자재 발주 조회.cs</DependentUpon>
