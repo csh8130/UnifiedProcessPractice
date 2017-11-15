@@ -97,6 +97,15 @@
             birtgDateLabel.TabIndex = 14;
             birtgDateLabel.Text = "생년월일";
             // 
+            // memberIDLabel
+            // 
+            memberIDLabel.AutoSize = true;
+            memberIDLabel.Location = new System.Drawing.Point(36, 37);
+            memberIDLabel.Name = "memberIDLabel";
+            memberIDLabel.Size = new System.Drawing.Size(16, 12);
+            memberIDLabel.TabIndex = 19;
+            memberIDLabel.Text = "ID";
+            // 
             // databaseDataSet
             // 
             this.databaseDataSet.DataSetName = "DatabaseDataSet";
@@ -151,6 +160,7 @@
             this.addressTextBox.Name = "addressTextBox";
             this.addressTextBox.Size = new System.Drawing.Size(163, 21);
             this.addressTextBox.TabIndex = 11;
+            this.addressTextBox.TextChanged += new System.EventHandler(this.addressTextBox_TextChanged);
             // 
             // nameTextBox
             // 
@@ -158,6 +168,7 @@
             this.nameTextBox.Name = "nameTextBox";
             this.nameTextBox.Size = new System.Drawing.Size(100, 21);
             this.nameTextBox.TabIndex = 13;
+            this.nameTextBox.TextChanged += new System.EventHandler(this.nameTextBox_TextChanged);
             // 
             // birtgDateTextBox
             // 
@@ -165,6 +176,7 @@
             this.birtgDateTextBox.Name = "birtgDateTextBox";
             this.birtgDateTextBox.Size = new System.Drawing.Size(100, 21);
             this.birtgDateTextBox.TabIndex = 15;
+            this.birtgDateTextBox.TextChanged += new System.EventHandler(this.birtgDateTextBox_TextChanged);
             // 
             // button1
             // 
@@ -186,15 +198,6 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // memberIDLabel
-            // 
-            memberIDLabel.AutoSize = true;
-            memberIDLabel.Location = new System.Drawing.Point(36, 37);
-            memberIDLabel.Name = "memberIDLabel";
-            memberIDLabel.Size = new System.Drawing.Size(16, 12);
-            memberIDLabel.TabIndex = 19;
-            memberIDLabel.Text = "ID";
-            // 
             // memberIDTextBox
             // 
             this.memberIDTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.memberBindingSource, "MemberID", true));
@@ -202,6 +205,7 @@
             this.memberIDTextBox.Name = "memberIDTextBox";
             this.memberIDTextBox.Size = new System.Drawing.Size(100, 21);
             this.memberIDTextBox.TabIndex = 20;
+            this.memberIDTextBox.TextChanged += new System.EventHandler(this.memberIDTextBox_TextChanged);
             // 
             // label1
             // 
@@ -227,7 +231,6 @@
             this.phonNum1.Name = "phonNum1";
             this.phonNum1.Size = new System.Drawing.Size(32, 21);
             this.phonNum1.TabIndex = 23;
-       
             // 
             // phonNum2
             // 
@@ -235,6 +238,7 @@
             this.phonNum2.Name = "phonNum2";
             this.phonNum2.Size = new System.Drawing.Size(32, 21);
             this.phonNum2.TabIndex = 24;
+            this.phonNum2.TextChanged += new System.EventHandler(this.phonNum2_TextChanged);
             // 
             // phonNum0
             // 

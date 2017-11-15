@@ -70,11 +70,11 @@ namespace UnifiedProcessPractice
             {
                 businessCompanyTableAdapter.UpdateQuery(bPhoneNum, address, phoneNum, name, cDate, eDate, bName);
                 //연락처 ,주소, 담당자연락처, 담당자이름, 계약일, 만료일, 수정할 행의 공급업체명
-                MessageBox.Show("수정이 완료되었습니다!!");
+                MessageBox.Show("수정에 성공하였습니다.");
             }
             else
             {
-                MessageBox.Show("존재하지않는 공급업체명입니다!!");
+                MessageBox.Show("수정에 실패하였습니다.");
             }
         }
 

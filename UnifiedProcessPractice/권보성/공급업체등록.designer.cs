@@ -62,6 +62,78 @@
             ((System.ComponentModel.ISupportInitialize)(this.businessCompanyBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
+            // businessNameLabel
+            // 
+            businessNameLabel.AutoSize = true;
+            businessNameLabel.Location = new System.Drawing.Point(37, 50);
+            businessNameLabel.Name = "businessNameLabel";
+            businessNameLabel.Size = new System.Drawing.Size(69, 12);
+            businessNameLabel.TabIndex = 1;
+            businessNameLabel.Text = "공급업체 명";
+            // 
+            // businessPhoneNoLabel
+            // 
+            businessPhoneNoLabel.AutoSize = true;
+            businessPhoneNoLabel.Location = new System.Drawing.Point(37, 85);
+            businessPhoneNoLabel.Name = "businessPhoneNoLabel";
+            businessPhoneNoLabel.Size = new System.Drawing.Size(41, 12);
+            businessPhoneNoLabel.TabIndex = 3;
+            businessPhoneNoLabel.Text = "연락처";
+            // 
+            // addressLabel
+            // 
+            addressLabel.AutoSize = true;
+            addressLabel.Location = new System.Drawing.Point(37, 121);
+            addressLabel.Name = "addressLabel";
+            addressLabel.Size = new System.Drawing.Size(29, 12);
+            addressLabel.TabIndex = 5;
+            addressLabel.Text = "주소";
+            // 
+            // businessNumberLabel
+            // 
+            businessNumberLabel.AutoSize = true;
+            businessNumberLabel.Location = new System.Drawing.Point(37, 161);
+            businessNumberLabel.Name = "businessNumberLabel";
+            businessNumberLabel.Size = new System.Drawing.Size(89, 12);
+            businessNumberLabel.TabIndex = 7;
+            businessNumberLabel.Text = "사업자등록번호";
+            // 
+            // phoneNoLabel
+            // 
+            phoneNoLabel.AutoSize = true;
+            phoneNoLabel.Location = new System.Drawing.Point(37, 198);
+            phoneNoLabel.Name = "phoneNoLabel";
+            phoneNoLabel.Size = new System.Drawing.Size(81, 12);
+            phoneNoLabel.TabIndex = 9;
+            phoneNoLabel.Text = "담당자 연락처";
+            // 
+            // nameLabel
+            // 
+            nameLabel.AutoSize = true;
+            nameLabel.Location = new System.Drawing.Point(37, 234);
+            nameLabel.Name = "nameLabel";
+            nameLabel.Size = new System.Drawing.Size(69, 12);
+            nameLabel.TabIndex = 11;
+            nameLabel.Text = "담당자 이름";
+            // 
+            // contractDateLabel
+            // 
+            contractDateLabel.AutoSize = true;
+            contractDateLabel.Location = new System.Drawing.Point(327, 50);
+            contractDateLabel.Name = "contractDateLabel";
+            contractDateLabel.Size = new System.Drawing.Size(41, 12);
+            contractDateLabel.TabIndex = 13;
+            contractDateLabel.Text = "계약일";
+            // 
+            // expireDateLabel
+            // 
+            expireDateLabel.AutoSize = true;
+            expireDateLabel.Location = new System.Drawing.Point(327, 85);
+            expireDateLabel.Name = "expireDateLabel";
+            expireDateLabel.Size = new System.Drawing.Size(65, 12);
+            expireDateLabel.TabIndex = 15;
+            expireDateLabel.Text = "계약만료일";
+            // 
             // databaseDataSet
             // 
             this.databaseDataSet.DataSetName = "DatabaseDataSet";
@@ -101,15 +173,6 @@
             this.tableAdapterManager.UpdateOrder = UnifiedProcessPractice.DatabaseDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.WarehousingInfoTableAdapter = null;
             // 
-            // businessNameLabel
-            // 
-            businessNameLabel.AutoSize = true;
-            businessNameLabel.Location = new System.Drawing.Point(37, 50);
-            businessNameLabel.Name = "businessNameLabel";
-            businessNameLabel.Size = new System.Drawing.Size(69, 12);
-            businessNameLabel.TabIndex = 1;
-            businessNameLabel.Text = "공급업체 명";
-            // 
             // businessNameTextBox
             // 
             this.businessNameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.businessCompanyBindingSource, "BusinessName", true));
@@ -117,15 +180,7 @@
             this.businessNameTextBox.Name = "businessNameTextBox";
             this.businessNameTextBox.Size = new System.Drawing.Size(170, 21);
             this.businessNameTextBox.TabIndex = 2;
-            // 
-            // businessPhoneNoLabel
-            // 
-            businessPhoneNoLabel.AutoSize = true;
-            businessPhoneNoLabel.Location = new System.Drawing.Point(37, 85);
-            businessPhoneNoLabel.Name = "businessPhoneNoLabel";
-            businessPhoneNoLabel.Size = new System.Drawing.Size(41, 12);
-            businessPhoneNoLabel.TabIndex = 3;
-            businessPhoneNoLabel.Text = "연락처";
+            this.businessNameTextBox.TextChanged += new System.EventHandler(this.businessNameTextBox_TextChanged);
             // 
             // businessPhoneNoTextBox
             // 
@@ -134,15 +189,7 @@
             this.businessPhoneNoTextBox.Name = "businessPhoneNoTextBox";
             this.businessPhoneNoTextBox.Size = new System.Drawing.Size(170, 21);
             this.businessPhoneNoTextBox.TabIndex = 4;
-            // 
-            // addressLabel
-            // 
-            addressLabel.AutoSize = true;
-            addressLabel.Location = new System.Drawing.Point(37, 121);
-            addressLabel.Name = "addressLabel";
-            addressLabel.Size = new System.Drawing.Size(29, 12);
-            addressLabel.TabIndex = 5;
-            addressLabel.Text = "주소";
+            this.businessPhoneNoTextBox.TextChanged += new System.EventHandler(this.businessPhoneNoTextBox_TextChanged);
             // 
             // addressTextBox
             // 
@@ -151,15 +198,7 @@
             this.addressTextBox.Name = "addressTextBox";
             this.addressTextBox.Size = new System.Drawing.Size(170, 21);
             this.addressTextBox.TabIndex = 6;
-            // 
-            // businessNumberLabel
-            // 
-            businessNumberLabel.AutoSize = true;
-            businessNumberLabel.Location = new System.Drawing.Point(37, 161);
-            businessNumberLabel.Name = "businessNumberLabel";
-            businessNumberLabel.Size = new System.Drawing.Size(89, 12);
-            businessNumberLabel.TabIndex = 7;
-            businessNumberLabel.Text = "사업자등록번호";
+            this.addressTextBox.TextChanged += new System.EventHandler(this.addressTextBox_TextChanged);
             // 
             // businessNumberTextBox
             // 
@@ -168,15 +207,7 @@
             this.businessNumberTextBox.Name = "businessNumberTextBox";
             this.businessNumberTextBox.Size = new System.Drawing.Size(170, 21);
             this.businessNumberTextBox.TabIndex = 8;
-            // 
-            // phoneNoLabel
-            // 
-            phoneNoLabel.AutoSize = true;
-            phoneNoLabel.Location = new System.Drawing.Point(37, 198);
-            phoneNoLabel.Name = "phoneNoLabel";
-            phoneNoLabel.Size = new System.Drawing.Size(81, 12);
-            phoneNoLabel.TabIndex = 9;
-            phoneNoLabel.Text = "담당자 연락처";
+            this.businessNumberTextBox.TextChanged += new System.EventHandler(this.businessNumberTextBox_TextChanged);
             // 
             // phoneNoTextBox
             // 
@@ -185,15 +216,7 @@
             this.phoneNoTextBox.Name = "phoneNoTextBox";
             this.phoneNoTextBox.Size = new System.Drawing.Size(170, 21);
             this.phoneNoTextBox.TabIndex = 10;
-            // 
-            // nameLabel
-            // 
-            nameLabel.AutoSize = true;
-            nameLabel.Location = new System.Drawing.Point(37, 234);
-            nameLabel.Name = "nameLabel";
-            nameLabel.Size = new System.Drawing.Size(69, 12);
-            nameLabel.TabIndex = 11;
-            nameLabel.Text = "담당자 이름";
+            this.phoneNoTextBox.TextChanged += new System.EventHandler(this.phoneNoTextBox_TextChanged);
             // 
             // nameTextBox
             // 
@@ -202,15 +225,7 @@
             this.nameTextBox.Name = "nameTextBox";
             this.nameTextBox.Size = new System.Drawing.Size(170, 21);
             this.nameTextBox.TabIndex = 12;
-            // 
-            // contractDateLabel
-            // 
-            contractDateLabel.AutoSize = true;
-            contractDateLabel.Location = new System.Drawing.Point(327, 50);
-            contractDateLabel.Name = "contractDateLabel";
-            contractDateLabel.Size = new System.Drawing.Size(41, 12);
-            contractDateLabel.TabIndex = 13;
-            contractDateLabel.Text = "계약일";
+            this.nameTextBox.TextChanged += new System.EventHandler(this.nameTextBox_TextChanged);
             // 
             // contractDateDateTimePicker
             // 
@@ -219,15 +234,6 @@
             this.contractDateDateTimePicker.Name = "contractDateDateTimePicker";
             this.contractDateDateTimePicker.Size = new System.Drawing.Size(170, 21);
             this.contractDateDateTimePicker.TabIndex = 14;
-            // 
-            // expireDateLabel
-            // 
-            expireDateLabel.AutoSize = true;
-            expireDateLabel.Location = new System.Drawing.Point(327, 85);
-            expireDateLabel.Name = "expireDateLabel";
-            expireDateLabel.Size = new System.Drawing.Size(65, 12);
-            expireDateLabel.TabIndex = 15;
-            expireDateLabel.Text = "계약만료일";
             // 
             // expireDateDateTimePicker
             // 
