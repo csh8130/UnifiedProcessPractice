@@ -73,5 +73,30 @@ namespace UnifiedProcessPractice
                label6.Text = reservationTableAdapter.FindReservationByTableNumber(textBox1.Text)[0][4].ToString();
             }
         }
+        /*
+        작성일시 : 2017-11-15
+        설계자   : 박상준
+        목적     : 테이블 번호를 숫자만 입력받게 하는 기능이다.
+        */
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(char.IsDigit(e.KeyChar) || e.KeyChar == Convert.ToChar(Keys.Back)))
+            {
+                e.Handled = true;
+            }
+        }
+
+        /*
+        작성일시 : 2017-11-15
+        설계자   : 박상준
+        목적     : 첫번째 입력값으로 0을 받지 않게 하기위함
+        */
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            if(textBox1.Text.Equals("0"))
+            {
+                textBox1.Text = "";
+            }
+        }
     }
 }

@@ -35,19 +35,19 @@
             System.Windows.Forms.Label phoneNumLabel;
             System.Windows.Forms.Label tableNumberLabel;
             this.dateDateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.reservationBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.databaseDataSet = new UnifiedProcessPractice.DatabaseDataSet();
             this.memberTextBox = new System.Windows.Forms.TextBox();
             this.nameTextBox = new System.Windows.Forms.TextBox();
             this.phoneNumTextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.reservationBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.databaseDataSet = new UnifiedProcessPractice.DatabaseDataSet();
             this.reservationTableAdapter = new UnifiedProcessPractice.DatabaseDataSetTableAdapters.ReservationTableAdapter();
             this.tableAdapterManager = new UnifiedProcessPractice.DatabaseDataSetTableAdapters.TableAdapterManager();
             this.memberTableAdapter1 = new UnifiedProcessPractice.DatabaseDataSetTableAdapters.MemberTableAdapter();
             this.tableBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tableTableAdapter = new UnifiedProcessPractice.DatabaseDataSetTableAdapters.TableTableAdapter();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             dateLabel = new System.Windows.Forms.Label();
             memberLabel = new System.Windows.Forms.Label();
             nameLabel = new System.Windows.Forms.Label();
@@ -106,46 +106,40 @@
             // dateDateTimePicker
             // 
             this.dateDateTimePicker.Checked = false;
-            this.dateDateTimePicker.CustomFormat = "yyyy-mm-dd HH:MM:ss";
-            this.dateDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.reservationBindingSource, "Date", true));
+            this.dateDateTimePicker.CustomFormat = "yyyy-MM-dd hh:mm:ss";
             this.dateDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateDateTimePicker.Location = new System.Drawing.Point(459, 198);
             this.dateDateTimePicker.Name = "dateDateTimePicker";
             this.dateDateTimePicker.Size = new System.Drawing.Size(200, 21);
             this.dateDateTimePicker.TabIndex = 3;
-            this.dateDateTimePicker.ValueChanged += new System.EventHandler(this.dateDateTimePicker_ValueChanged);
-            // 
-            // reservationBindingSource
-            // 
-            this.reservationBindingSource.DataMember = "Reservation";
-            this.reservationBindingSource.DataSource = this.databaseDataSet;
-            // 
-            // databaseDataSet
-            // 
-            this.databaseDataSet.DataSetName = "DatabaseDataSet";
-            this.databaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.dateDateTimePicker.Value = new System.DateTime(2017, 11, 15, 0, 0, 0, 0);
             // 
             // memberTextBox
             // 
             this.memberTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.reservationBindingSource, "Member", true));
             this.memberTextBox.Location = new System.Drawing.Point(459, 232);
+            this.memberTextBox.MaxLength = 30;
             this.memberTextBox.Name = "memberTextBox";
             this.memberTextBox.Size = new System.Drawing.Size(200, 21);
             this.memberTextBox.TabIndex = 5;
             this.memberTextBox.TextChanged += new System.EventHandler(this.memberTextBox_TextChanged);
+            this.memberTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.memberTextBox_KeyPress);
             // 
             // nameTextBox
             // 
             this.nameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.reservationBindingSource, "Name", true));
             this.nameTextBox.Location = new System.Drawing.Point(459, 269);
+            this.nameTextBox.MaxLength = 10;
             this.nameTextBox.Name = "nameTextBox";
             this.nameTextBox.Size = new System.Drawing.Size(200, 21);
             this.nameTextBox.TabIndex = 7;
+            this.nameTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.nameTextBox_KeyPress);
             // 
             // phoneNumTextBox
             // 
             this.phoneNumTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.reservationBindingSource, "PhoneNum", true));
             this.phoneNumTextBox.Location = new System.Drawing.Point(459, 303);
+            this.phoneNumTextBox.MaxLength = 11;
             this.phoneNumTextBox.Name = "phoneNumTextBox";
             this.phoneNumTextBox.Size = new System.Drawing.Size(200, 21);
             this.phoneNumTextBox.TabIndex = 9;
@@ -169,6 +163,23 @@
             this.button1.Text = "등록";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(459, 339);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(200, 21);
+            this.textBox1.TabIndex = 16;
+            // 
+            // reservationBindingSource
+            // 
+            this.reservationBindingSource.DataMember = "Reservation";
+            this.reservationBindingSource.DataSource = this.databaseDataSet;
+            // 
+            // databaseDataSet
+            // 
+            this.databaseDataSet.DataSetName = "DatabaseDataSet";
+            this.databaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // reservationTableAdapter
             // 
@@ -212,13 +223,6 @@
             // 
             this.tableTableAdapter.ClearBeforeFill = true;
             // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(459, 339);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(200, 21);
-            this.textBox1.TabIndex = 16;
-            // 
             // 예약정보등록
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -236,7 +240,7 @@
             this.Controls.Add(this.phoneNumTextBox);
             this.Controls.Add(tableNumberLabel);
             this.Name = "예약정보등록";
-            this.Size = new System.Drawing.Size(992, 581);
+            this.Size = new System.Drawing.Size(992, 590);
             this.Load += new System.EventHandler(this.예약정보등록_Load);
             ((System.ComponentModel.ISupportInitialize)(this.reservationBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.databaseDataSet)).EndInit();
