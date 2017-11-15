@@ -33,12 +33,18 @@ namespace UnifiedProcessPractice
         */
         private void button1_Click(object sender, EventArgs e)
         {
-            DataTable dt = memberTableAdapter.GetDataByMemberNumber(memberNumberTextBox.Text);
+            try
+            {
+                DataTable dt = memberTableAdapter.GetDataByMemberNumber(memberNumberTextBox.Text);
 
-            string point = dt.Rows[0][3].ToString();
+                string point = dt.Rows[0][3].ToString();
 
-            pointTextBox.Text = point;
-
+                pointTextBox.Text = point;
+            }
+            catch (System.Exception ex)
+            {
+                MessageBox.Show("오류내용 : " + ex);
+            }
 
 
         }

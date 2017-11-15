@@ -69,13 +69,29 @@ namespace UnifiedProcessPractice
         설계자 : 손용록
         목적 : 수정 버튼을 클릭하면 선택된 ID와 같은 직원 정보를, 입력된 직원 정보들과 같이 수정하고 수정완료 메시지를 출력한다.
         -----------------
+        수정일시 : 2017-11-15
+        수정내용 : 예외처리를 적용하였다.
         */
 
         private void button1_Click(object sender, EventArgs e)
         {
-            int temp = comboBox1.SelectedIndex;
-            employeeTableAdapter.UpdateQueryByID(passwordTextBox.Text,positionTextBox.Text,nameTextBox.Text,int.Parse(ageTextBox.Text),addressTextBox.Text,int.Parse(homePhoneNumTextBox.Text),int.Parse(cellPhoneNumTextBox.Text),eMailTextBox.Text, comboBox1.Items[temp].ToString());
-            MessageBox.Show("수정되었습니다!!");
+            if (passwordTextBox.Text.Length > 20 || passwordTextBox.Text.Length == 0 ||
+                positionTextBox.Text.Length > 20 || positionTextBox.Text.Length == 0 ||
+                nameTextBox.Text.Length > 8 || nameTextBox.Text.Length == 0 ||
+                ageTextBox.Text.Length > 3 || ageTextBox.Text.Length == 0 ||
+                addressTextBox.Text.Length > 50 || addressTextBox.Text.Length == 0 ||
+                homePhoneNumTextBox.Text.Length > 15 || homePhoneNumTextBox.Text.Length == 0 ||
+                cellPhoneNumTextBox.Text.Length > 15 || cellPhoneNumTextBox.Text.Length == 0 ||
+                eMailTextBox.Text.Length > 30 || eMailTextBox.Text.Length == 0)
+                {
+                MessageBox.Show("양식에 오류가있습니다. 다시시도해주세요");
+            }
+            else
+            {
+                int temp = comboBox1.SelectedIndex;
+                employeeTableAdapter.UpdateQueryByID(passwordTextBox.Text, positionTextBox.Text, nameTextBox.Text, int.Parse(ageTextBox.Text), addressTextBox.Text, int.Parse(homePhoneNumTextBox.Text), int.Parse(cellPhoneNumTextBox.Text), eMailTextBox.Text, comboBox1.Items[temp].ToString());
+                MessageBox.Show("수정되었습니다!!");
+            }
         }
     }
 }

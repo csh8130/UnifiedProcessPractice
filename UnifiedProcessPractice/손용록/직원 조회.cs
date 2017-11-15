@@ -42,17 +42,26 @@ namespace UnifiedProcessPractice
                comboBox1.Items.Add(EP.Rows[i][1]);
            }
         }
-        
+
         /*
         작성일시 : 2017-11-08
         설계자 : 손용록
         목적 : 선택된 직원ID로 조회를 실행한후 직원정보들을 출력한다.
         -----------------
-        */ 
+        수정일시 : 2017-11-15
+        수정내용 : 예외처리를 적용하였다.
+        */
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            int temp = comboBox1.SelectedIndex;
-            employeeTableAdapter.FillByID(databaseDataSet.Employee,comboBox1.Items[temp].ToString());
-        }
+            try
+            {
+                int temp = comboBox1.SelectedIndex;
+                employeeTableAdapter.FillByID(databaseDataSet.Employee, comboBox1.Items[temp].ToString());
+            }
+            catch (System.Exception ex)
+            {
+                MessageBox.Show("오류내용 : " + ex);
+            }
+}
     }
 }

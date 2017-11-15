@@ -58,13 +58,22 @@ namespace UnifiedProcessPractice
         설계자 : 손용록
         목적 : 삭제버튼을 누르면 현재 선택된 ID와 같은 직원 정보를 테이블에서 삭제한후 삭제완료 메시지를 출력한다.
         -----------------
+        수정일시 : 2017-11-15
+        수정내용 : 예외처리를 적용하였다.
         */
 
         private void button1_Click(object sender, EventArgs e)
         {
-            int temp = comboBox1.SelectedIndex;
-            employeeTableAdapter.DeleteQueryByID(comboBox1.Items[temp].ToString());
-            MessageBox.Show("삭제되었습니다!!");
+            try
+            {
+                int temp = comboBox1.SelectedIndex;
+                employeeTableAdapter.DeleteQueryByID(comboBox1.Items[temp].ToString());
+                MessageBox.Show("삭제되었습니다!!");
+            }
+            catch (System.Exception ex)
+            {
+                MessageBox.Show("오류내용 : " + ex);
+            }
         }
     }
 }
