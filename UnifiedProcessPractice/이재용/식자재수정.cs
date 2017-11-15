@@ -24,21 +24,41 @@ namespace UnifiedProcessPractice
             this.tableAdapterManager.UpdateAll(this.databaseDataSet);
 
         }
+
         /*
         작성일시 : 2017-11-08
         설계자 : 이재용
         목적 : 식자재 정보를 수정하기위한 쿼리를 호출 후 출력한다.
+        -----------------
+        수정일시 : 2017-11-14
+        수정내용 : 성공 / 실패 Message 내용 수정 + 문자열 길이 확인 추가
         */
         private void button1_Click(object sender, EventArgs e)
         {
-            try {
-                ingredientTableAdapter.UpdateQueryID(nameTextBox.Text, dateDateTimePicker.Value.Date, originTextBox.Text, stateTextBox.Text, Convert.ToInt32(temperatureTextBox.Text), Convert.ToInt32(humidityTextBox.Text), Convert.ToInt32(countTextBox.Text), measureTextBox.Text, Convert.ToInt32(keepDateTextBox.Text), Convert.ToInt32(keepCountTextBox.Text), comboBox1.Text);
-
-                MessageBox.Show("성공");
+            try
+            {
+                if (nameTextBox.Text.Length == 0 || nameTextBox.Text.Length > 20 ||
+                      originTextBox.Text.Length == 0 || originTextBox.Text.Length > 20 ||
+                      stateTextBox.Text.Length == 0 || stateTextBox.Text.Length > 20 ||
+                      temperatureTextBox.Text.Length == 0 || temperatureTextBox.Text.Length > 3 ||
+                      humidityTextBox.Text.Length == 0 || humidityTextBox.Text.Length > 3 ||
+                      countTextBox.Text.Length == 0 || countTextBox.Text.Length > 3 ||
+                      measureTextBox.Text.Length == 0 || measureTextBox.Text.Length > 20 ||
+                      keepDateTextBox.Text.Length == 0 || keepDateTextBox.Text.Length > 10 ||
+                      keepCountTextBox.Text.Length == 0 || keepCountTextBox.Text.Length > 3)
+                {
+                    MessageBox.Show("정보가 잘못되었습니다. \r다시입력하세요");
+                }
+                else
+                {
+                    ingredientTableAdapter.UpdateQueryID(nameTextBox.Text, dateDateTimePicker.Value.Date, originTextBox.Text, stateTextBox.Text, Convert.ToInt32(temperatureTextBox.Text), Convert.ToInt32(humidityTextBox.Text), Convert.ToInt32(countTextBox.Text), measureTextBox.Text, Convert.ToInt32(keepDateTextBox.Text), Convert.ToInt32(keepCountTextBox.Text), comboBox1.Text);
+                    MessageBox.Show("해당 정보를 수정하였습니다.");
+                    
+                }
             }
             catch (Exception)
             {
-                MessageBox.Show("실패");
+                MessageBox.Show("식자재 정보수정에 실패하였습니다.");
             }
         }
 

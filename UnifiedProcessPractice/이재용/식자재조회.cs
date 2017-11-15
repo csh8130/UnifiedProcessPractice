@@ -103,7 +103,7 @@ namespace UnifiedProcessPractice
                     my_meas = null;
 
                 ingredientTableAdapter.FillByDate(databaseDataSet.Ingredient, my_name, dateDateTimePicker.Value.Date, my_origin, my_state, input_tmep, input_hum, input_count, my_meas, input_kdate, input_kcount);
- 
+
             }
             catch (Exception ex)
             {

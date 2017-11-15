@@ -226,6 +226,7 @@
             // countTextBox
             // 
             this.countTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.ingredientBindingSource, "Count", true));
+            this.countTextBox.ImeMode = System.Windows.Forms.ImeMode.Disable;
             this.countTextBox.Location = new System.Drawing.Point(541, 475);
             this.countTextBox.Name = "countTextBox";
             this.countTextBox.Size = new System.Drawing.Size(200, 21);
