@@ -49,10 +49,25 @@ namespace UnifiedProcessPractice
         설계자 : 최승혁
         목적 : 조회 버튼
         사용자의 입력값을 검사하여 유효한 값인지 검토후 유효한경우 조회 쿼리를 호출한다 (미완)
+        ----------------------
+        수정일시 : 2017-11-15
+        검색 조건으로 날짜, 발주업체명, 발주번호가 제대로 동작안하는것을 제대로 동작되도록 쿼리 변경  
         */
         private void selectButton_Click(object sender, EventArgs e)
         {
-            purchaseOrderTableAdapter.FillByCompanyName(databaseDataSet.PurchaseOrder, businessNameCombobox.Text);
+            if(businessNameCombobox.Text == "" && purchaseCombobox.Text != "")
+            {
+                purchaseOrderTableAdapter.FillByInfoPurchaseNum(databaseDataSet.PurchaseOrder, dateTimePicker1.Value, dateTimePicker2.Value, purchaseCombobox.Text);
+            }
+            else if(purchaseCombobox.Text == "" && businessNameCombobox.Text !="")
+            {
+                purchaseOrderTableAdapter.FillByInfoBusinessName(databaseDataSet.PurchaseOrder, dateTimePicker1.Value, dateTimePicker2.Value, businessNameCombobox.Text);
+            }
+            else
+            {
+                purchaseOrderTableAdapter.FillByAll(databaseDataSet.PurchaseOrder, dateTimePicker1.Value, dateTimePicker2.Value, purchaseCombobox.Text, businessNameCombobox.Text);
+            }
+
         }
     }
 }

@@ -30,21 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.Label reasonLabel;
-            this.databaseDataSet = new UnifiedProcessPractice.DatabaseDataSet();
-            this.returnBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.returnTableAdapter = new UnifiedProcessPractice.DatabaseDataSetTableAdapters.ReturnTableAdapter();
-            this.tableAdapterManager = new UnifiedProcessPractice.DatabaseDataSetTableAdapters.TableAdapterManager();
-            this.purchaseOrderTableAdapter1 = new UnifiedProcessPractice.DatabaseDataSetTableAdapters.PurchaseOrderTableAdapter();
             this.reasonTextBox = new System.Windows.Forms.TextBox();
             this.returnDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.returnNumberCombobox = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -55,10 +42,23 @@
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label5 = new System.Windows.Forms.Label();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.returnBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.databaseDataSet = new UnifiedProcessPractice.DatabaseDataSet();
+            this.returnTableAdapter = new UnifiedProcessPractice.DatabaseDataSetTableAdapters.ReturnTableAdapter();
+            this.tableAdapterManager = new UnifiedProcessPractice.DatabaseDataSetTableAdapters.TableAdapterManager();
+            this.purchaseOrderTableAdapter1 = new UnifiedProcessPractice.DatabaseDataSetTableAdapters.PurchaseOrderTableAdapter();
             reasonLabel = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.databaseDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.returnBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.returnDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.returnBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.databaseDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // reasonLabel
@@ -69,49 +69,6 @@
             reasonLabel.Size = new System.Drawing.Size(57, 12);
             reasonLabel.TabIndex = 7;
             reasonLabel.Text = "반품이유:";
-            // 
-            // databaseDataSet
-            // 
-            this.databaseDataSet.DataSetName = "DatabaseDataSet";
-            this.databaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // returnBindingSource
-            // 
-            this.returnBindingSource.DataMember = "Return";
-            this.returnBindingSource.DataSource = this.databaseDataSet;
-            // 
-            // returnTableAdapter
-            // 
-            this.returnTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.BusinessCompanyTableAdapter = null;
-            this.tableAdapterManager.DisuseInfoTableAdapter = null;
-            this.tableAdapterManager.EmployeeTableAdapter = null;
-            this.tableAdapterManager.ExpectSalesVolumeTableAdapter = null;
-            this.tableAdapterManager.IngredientConsumeTableAdapter = null;
-            this.tableAdapterManager.IngredientTableAdapter = null;
-            this.tableAdapterManager.MemberTableAdapter = null;
-            this.tableAdapterManager.MenuTableAdapter = null;
-            this.tableAdapterManager.OrderTableAdapter = null;
-            this.tableAdapterManager.PaymentTableAdapter = null;
-            this.tableAdapterManager.PointOptionTableAdapter = null;
-            this.tableAdapterManager.PurchaseOrderTableAdapter = this.purchaseOrderTableAdapter1;
-            this.tableAdapterManager.ReleaseInfoTableAdapter = null;
-            this.tableAdapterManager.ReservationControlTableAdapter = null;
-            this.tableAdapterManager.ReservationTableAdapter = null;
-            this.tableAdapterManager.ReturnTableAdapter = this.returnTableAdapter;
-            this.tableAdapterManager.SARTableAdapter = null;
-            this.tableAdapterManager.StockTableAdapter = null;
-            this.tableAdapterManager.TableTableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = UnifiedProcessPractice.DatabaseDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            this.tableAdapterManager.WarehousingInfoTableAdapter = null;
-            // 
-            // purchaseOrderTableAdapter1
-            // 
-            this.purchaseOrderTableAdapter1.ClearBeforeFill = true;
             // 
             // reasonTextBox
             // 
@@ -145,62 +102,6 @@
             this.returnDataGridView.RowTemplate.Height = 23;
             this.returnDataGridView.Size = new System.Drawing.Size(732, 220);
             this.returnDataGridView.TabIndex = 8;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "ReturnNumber";
-            this.dataGridViewTextBoxColumn1.HeaderText = "반품번호";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "IngredientName";
-            this.dataGridViewTextBoxColumn2.HeaderText = "식자재이름";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "SupplyDate";
-            this.dataGridViewTextBoxColumn3.HeaderText = "공급일시";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "Reason";
-            this.dataGridViewTextBoxColumn4.HeaderText = "반품이유";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "ReturnDate";
-            this.dataGridViewTextBoxColumn5.HeaderText = "반품일시";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.ReadOnly = true;
-            // 
-            // dataGridViewCheckBoxColumn1
-            // 
-            this.dataGridViewCheckBoxColumn1.DataPropertyName = "IsEnded";
-            this.dataGridViewCheckBoxColumn1.HeaderText = "반품확정여부";
-            this.dataGridViewCheckBoxColumn1.Name = "dataGridViewCheckBoxColumn1";
-            this.dataGridViewCheckBoxColumn1.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "PurchaseOrderNumber";
-            this.dataGridViewTextBoxColumn6.HeaderText = "발주번호";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "IngredientNumber";
-            this.dataGridViewTextBoxColumn7.HeaderText = "식자재번호";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            this.dataGridViewTextBoxColumn7.ReadOnly = true;
             // 
             // returnNumberCombobox
             // 
@@ -277,6 +178,7 @@
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 21);
             this.dateTimePicker1.TabIndex = 15;
+            this.dateTimePicker1.Value = new System.DateTime(1990, 1, 1, 0, 0, 0, 0);
             // 
             // label5
             // 
@@ -286,6 +188,105 @@
             this.label5.Size = new System.Drawing.Size(29, 12);
             this.label5.TabIndex = 14;
             this.label5.Text = "기간";
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "ReturnNumber";
+            this.dataGridViewTextBoxColumn1.HeaderText = "반품번호";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "IngredientName";
+            this.dataGridViewTextBoxColumn2.HeaderText = "식자재이름";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "SupplyDate";
+            this.dataGridViewTextBoxColumn3.HeaderText = "공급일시";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "Reason";
+            this.dataGridViewTextBoxColumn4.HeaderText = "반품이유";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "ReturnDate";
+            this.dataGridViewTextBoxColumn5.HeaderText = "반품일시";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
+            // 
+            // dataGridViewCheckBoxColumn1
+            // 
+            this.dataGridViewCheckBoxColumn1.DataPropertyName = "IsEnded";
+            this.dataGridViewCheckBoxColumn1.HeaderText = "반품확정여부";
+            this.dataGridViewCheckBoxColumn1.Name = "dataGridViewCheckBoxColumn1";
+            this.dataGridViewCheckBoxColumn1.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "PurchaseOrderNumber";
+            this.dataGridViewTextBoxColumn6.HeaderText = "발주번호";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "IngredientNumber";
+            this.dataGridViewTextBoxColumn7.HeaderText = "식자재번호";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.ReadOnly = true;
+            // 
+            // returnBindingSource
+            // 
+            this.returnBindingSource.DataMember = "Return";
+            this.returnBindingSource.DataSource = this.databaseDataSet;
+            // 
+            // databaseDataSet
+            // 
+            this.databaseDataSet.DataSetName = "DatabaseDataSet";
+            this.databaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // returnTableAdapter
+            // 
+            this.returnTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.BusinessCompanyTableAdapter = null;
+            this.tableAdapterManager.DisuseInfoTableAdapter = null;
+            this.tableAdapterManager.EmployeeTableAdapter = null;
+            this.tableAdapterManager.ExpectSalesVolumeTableAdapter = null;
+            this.tableAdapterManager.IngredientConsumeTableAdapter = null;
+            this.tableAdapterManager.IngredientTableAdapter = null;
+            this.tableAdapterManager.MemberTableAdapter = null;
+            this.tableAdapterManager.MenuTableAdapter = null;
+            this.tableAdapterManager.OrderTableAdapter = null;
+            this.tableAdapterManager.PaymentTableAdapter = null;
+            this.tableAdapterManager.PointOptionTableAdapter = null;
+            this.tableAdapterManager.PurchaseOrderTableAdapter = this.purchaseOrderTableAdapter1;
+            this.tableAdapterManager.ReleaseInfoTableAdapter = null;
+            this.tableAdapterManager.ReservationControlTableAdapter = null;
+            this.tableAdapterManager.ReservationTableAdapter = null;
+            this.tableAdapterManager.ReturnTableAdapter = this.returnTableAdapter;
+            this.tableAdapterManager.SARTableAdapter = null;
+            this.tableAdapterManager.StockTableAdapter = null;
+            this.tableAdapterManager.TableTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = UnifiedProcessPractice.DatabaseDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.WarehousingInfoTableAdapter = null;
+            // 
+            // purchaseOrderTableAdapter1
+            // 
+            this.purchaseOrderTableAdapter1.ClearBeforeFill = true;
             // 
             // 식자재_반품_조회
             // 
@@ -307,9 +308,9 @@
             this.Name = "식자재_반품_조회";
             this.Size = new System.Drawing.Size(800, 464);
             this.Load += new System.EventHandler(this.식자재_반품_조회_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.databaseDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.returnBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.returnDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.returnBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.databaseDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -45,10 +45,21 @@ namespace UnifiedProcessPractice
         설계자 : 최승혁
         목적 : 조회버튼 기능
         사용자 입력값이 유효한지 먼저확인후 조회한다 (미완)
+        ------------------------------------------------------
+        수정일시 : 2017-11-15
+        반품번호, 발주번호, 반품일시를 가지고 조회를 하는기느이 정상동작하지않아
+        정상 동작 하도록 쿼리문 수정
         */
         private void button1_Click(object sender, EventArgs e)
         {
-            returnTableAdapter.FillById(databaseDataSet.Return, returnNumberCombobox.Text);
+            //returnTableAdapter.FillById(databaseDataSet.Return, returnNumberCombobox.Text);
+
+            if (returnNumberCombobox.Text == "" && purchaseNumCombobox.Text != "")
+                returnTableAdapter.FillByInfoPurchaseNum(databaseDataSet.Return, dateTimePicker1.Value, dateTimePicker2.Value, purchaseNumCombobox.Text);
+            else if (returnNumberCombobox.Text != "" && purchaseNumCombobox.Text == "")
+                returnTableAdapter.FillByInfoNum(databaseDataSet.Return, dateTimePicker1.Value, dateTimePicker2.Value, returnNumberCombobox.Text);
+            else
+                returnTableAdapter.FillByAll(databaseDataSet.Return, dateTimePicker1.Value, dateTimePicker2.Value, returnNumberCombobox.Text, purchaseNumCombobox.Text);
         }
     }
 }

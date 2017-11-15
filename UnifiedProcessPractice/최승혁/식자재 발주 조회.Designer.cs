@@ -30,11 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.purchaseOrderDataGridView = new System.Windows.Forms.DataGridView();
-            this.selectButton = new System.Windows.Forms.Button();
-            this.purchaseCombobox = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.businessNameCombobox = new System.Windows.Forms.ComboBox();
-            this.label32 = new System.Windows.Forms.Label();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -46,6 +41,11 @@
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.purchaseOrderBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.databaseDataSet = new UnifiedProcessPractice.DatabaseDataSet();
+            this.selectButton = new System.Windows.Forms.Button();
+            this.purchaseCombobox = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.businessNameCombobox = new System.Windows.Forms.ComboBox();
+            this.label32 = new System.Windows.Forms.Label();
             this.purchaseOrderTableAdapter = new UnifiedProcessPractice.DatabaseDataSetTableAdapters.PurchaseOrderTableAdapter();
             this.tableAdapterManager = new UnifiedProcessPractice.DatabaseDataSetTableAdapters.TableAdapterManager();
             this.businessCompanyTableAdapter1 = new UnifiedProcessPractice.DatabaseDataSetTableAdapters.BusinessCompanyTableAdapter();
@@ -82,50 +82,6 @@
             this.purchaseOrderDataGridView.RowTemplate.Height = 23;
             this.purchaseOrderDataGridView.Size = new System.Drawing.Size(794, 264);
             this.purchaseOrderDataGridView.TabIndex = 1;
-            // 
-            // selectButton
-            // 
-            this.selectButton.Location = new System.Drawing.Point(649, 101);
-            this.selectButton.Name = "selectButton";
-            this.selectButton.Size = new System.Drawing.Size(81, 22);
-            this.selectButton.TabIndex = 2;
-            this.selectButton.Text = "조회";
-            this.selectButton.UseVisualStyleBackColor = true;
-            this.selectButton.Click += new System.EventHandler(this.selectButton_Click);
-            // 
-            // purchaseCombobox
-            // 
-            this.purchaseCombobox.FormattingEnabled = true;
-            this.purchaseCombobox.Location = new System.Drawing.Point(149, 36);
-            this.purchaseCombobox.Name = "purchaseCombobox";
-            this.purchaseCombobox.Size = new System.Drawing.Size(121, 20);
-            this.purchaseCombobox.TabIndex = 5;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(78, 39);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(53, 12);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "발주번호";
-            // 
-            // businessNameCombobox
-            // 
-            this.businessNameCombobox.FormattingEnabled = true;
-            this.businessNameCombobox.Location = new System.Drawing.Point(149, 68);
-            this.businessNameCombobox.Name = "businessNameCombobox";
-            this.businessNameCombobox.Size = new System.Drawing.Size(121, 20);
-            this.businessNameCombobox.TabIndex = 7;
-            // 
-            // label32
-            // 
-            this.label32.AutoSize = true;
-            this.label32.Location = new System.Drawing.Point(78, 69);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(65, 12);
-            this.label32.TabIndex = 8;
-            this.label32.Text = "공급업체명";
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -200,6 +156,50 @@
             this.databaseDataSet.DataSetName = "DatabaseDataSet";
             this.databaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
+            // selectButton
+            // 
+            this.selectButton.Location = new System.Drawing.Point(649, 101);
+            this.selectButton.Name = "selectButton";
+            this.selectButton.Size = new System.Drawing.Size(81, 22);
+            this.selectButton.TabIndex = 2;
+            this.selectButton.Text = "조회";
+            this.selectButton.UseVisualStyleBackColor = true;
+            this.selectButton.Click += new System.EventHandler(this.selectButton_Click);
+            // 
+            // purchaseCombobox
+            // 
+            this.purchaseCombobox.FormattingEnabled = true;
+            this.purchaseCombobox.Location = new System.Drawing.Point(149, 36);
+            this.purchaseCombobox.Name = "purchaseCombobox";
+            this.purchaseCombobox.Size = new System.Drawing.Size(121, 20);
+            this.purchaseCombobox.TabIndex = 5;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(78, 39);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(53, 12);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "발주번호";
+            // 
+            // businessNameCombobox
+            // 
+            this.businessNameCombobox.FormattingEnabled = true;
+            this.businessNameCombobox.Location = new System.Drawing.Point(149, 68);
+            this.businessNameCombobox.Name = "businessNameCombobox";
+            this.businessNameCombobox.Size = new System.Drawing.Size(121, 20);
+            this.businessNameCombobox.TabIndex = 7;
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Location = new System.Drawing.Point(78, 69);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(65, 12);
+            this.label32.TabIndex = 8;
+            this.label32.Text = "공급업체명";
+            // 
             // purchaseOrderTableAdapter
             // 
             this.purchaseOrderTableAdapter.ClearBeforeFill = true;
@@ -248,6 +248,7 @@
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 21);
             this.dateTimePicker1.TabIndex = 10;
+            this.dateTimePicker1.Value = new System.DateTime(1999, 1, 1, 0, 0, 0, 0);
             // 
             // dateTimePicker2
             // 
@@ -255,6 +256,7 @@
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(200, 21);
             this.dateTimePicker2.TabIndex = 11;
+            this.dateTimePicker2.Value = new System.DateTime(2017, 11, 15, 0, 0, 0, 0);
             // 
             // label3
             // 
