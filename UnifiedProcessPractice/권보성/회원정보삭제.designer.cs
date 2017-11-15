@@ -44,6 +44,24 @@
             ((System.ComponentModel.ISupportInitialize)(this.memberBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
+            // memberNumberLabel
+            // 
+            memberNumberLabel.AutoSize = true;
+            memberNumberLabel.Location = new System.Drawing.Point(113, 88);
+            memberNumberLabel.Name = "memberNumberLabel";
+            memberNumberLabel.Size = new System.Drawing.Size(109, 12);
+            memberNumberLabel.TabIndex = 1;
+            memberNumberLabel.Text = "삭제할 회원의 번호";
+            // 
+            // memberPWLabel
+            // 
+            memberPWLabel.AutoSize = true;
+            memberPWLabel.Location = new System.Drawing.Point(165, 147);
+            memberPWLabel.Name = "memberPWLabel";
+            memberPWLabel.Size = new System.Drawing.Size(53, 12);
+            memberPWLabel.TabIndex = 3;
+            memberPWLabel.Text = "패스워드";
+            // 
             // databaseDataSet
             // 
             this.databaseDataSet.DataSetName = "DatabaseDataSet";
@@ -83,15 +101,6 @@
             this.tableAdapterManager.UpdateOrder = UnifiedProcessPractice.DatabaseDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.WarehousingInfoTableAdapter = null;
             // 
-            // memberNumberLabel
-            // 
-            memberNumberLabel.AutoSize = true;
-            memberNumberLabel.Location = new System.Drawing.Point(113, 88);
-            memberNumberLabel.Name = "memberNumberLabel";
-            memberNumberLabel.Size = new System.Drawing.Size(109, 12);
-            memberNumberLabel.TabIndex = 1;
-            memberNumberLabel.Text = "삭제할 회원의 번호";
-            // 
             // memberNumberTextBox
             // 
             this.memberNumberTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.memberBindingSource, "MemberNumber", true));
@@ -99,15 +108,7 @@
             this.memberNumberTextBox.Name = "memberNumberTextBox";
             this.memberNumberTextBox.Size = new System.Drawing.Size(100, 21);
             this.memberNumberTextBox.TabIndex = 2;
-            // 
-            // memberPWLabel
-            // 
-            memberPWLabel.AutoSize = true;
-            memberPWLabel.Location = new System.Drawing.Point(165, 147);
-            memberPWLabel.Name = "memberPWLabel";
-            memberPWLabel.Size = new System.Drawing.Size(53, 12);
-            memberPWLabel.TabIndex = 3;
-            memberPWLabel.Text = "패스워드";
+            this.memberNumberTextBox.TextChanged += new System.EventHandler(this.memberNumberTextBox_TextChanged);
             // 
             // memberPWTextBox
             // 
@@ -117,6 +118,7 @@
             this.memberPWTextBox.PasswordChar = '*';
             this.memberPWTextBox.Size = new System.Drawing.Size(100, 21);
             this.memberPWTextBox.TabIndex = 4;
+            this.memberPWTextBox.TextChanged += new System.EventHandler(this.memberPWTextBox_TextChanged);
             // 
             // button1
             // 

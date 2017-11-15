@@ -41,5 +41,15 @@ namespace UnifiedProcessPractice
             
             businessCompanyTableAdapter.FillByBusinessName(databaseDataSet.BusinessCompany, textBox1.Text);
         }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            int len = textBox1.Text.Length;
+            if (len > 20)
+            {
+                MessageBox.Show("공급업체 명은 0~20자만 입력 가능합니다.");
+                textBox1.Clear();
+            }
+        }
     }
 }

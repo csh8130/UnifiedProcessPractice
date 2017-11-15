@@ -103,12 +103,12 @@ namespace UnifiedProcessPractice
                         {
                             businessCompanyTableAdapter.DeleteQuery(bName);
                             comboBox1.Items.Remove(bName);
-                            MessageBox.Show("성공적으로 삭제하였습니다!!");
+                            MessageBox.Show("삭제에 성공하였습니다.");
                             break;
                         }
                         else
                         {
-                            MessageBox.Show("사업자등록번호가 일치하지않습니다!!");
+                            MessageBox.Show("삭제에 실패하였습니다.");
                             return;
                         }
                     }
@@ -116,7 +116,7 @@ namespace UnifiedProcessPractice
             }
             catch (Exception)
             {
-                MessageBox.Show("삭제불가!!");
+                MessageBox.Show("삭제에 실패하였습니다.");
                 //다른 테이블에 저장되어있는경우 삭제불가
             }
 
@@ -124,7 +124,7 @@ namespace UnifiedProcessPractice
 
             if (!chk)
             {
-                MessageBox.Show("존재하지않는 공급업체 입니다!!");
+                MessageBox.Show("삭제에 실패하였습니다.");
             }
             else
             {

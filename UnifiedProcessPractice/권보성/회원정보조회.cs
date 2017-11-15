@@ -38,5 +38,22 @@ namespace UnifiedProcessPractice
         {
             memberTableAdapter.FillByName(databaseDataSet.Member, textBox1.Text);
         }
+
+
+        /*
+        작성일시 : 2017-11-15
+        설계자 : 권보성
+        목적 : 사용자로부터 입력받은값의 유효 범위를 체크한다.
+       
+        */
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            int len = textBox1.Text.Length;
+            if (len > 10)
+            {
+                MessageBox.Show("성명은 0~10자만 입력 가능합니다.");
+                textBox1.Clear();
+            }
+        }
     }
 }

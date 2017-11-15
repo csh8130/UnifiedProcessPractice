@@ -59,7 +59,7 @@ namespace UnifiedProcessPractice
 
             if (!memberPw.Equals(memberPwChk))
             {
-                MessageBox.Show("비밀번호를 확인해주세요");
+                MessageBox.Show("수정에 실패하였습니다. (비밀번호 미일치)");
                 return;
             }
 
@@ -69,7 +69,7 @@ namespace UnifiedProcessPractice
             {
                 if (phonNum.Equals(ta.Rows[i][4]))
                 {
-                    MessageBox.Show("이미등록된 전화번호입니다!!");
+                    MessageBox.Show("수정에 실패하였습니다. (이미등록된 전화번호)");
                     return;
                 }
                 if (memberNum.Equals(ta.Rows[i][0]))
@@ -79,14 +79,14 @@ namespace UnifiedProcessPractice
             }
             if (!chk)
             {
-                MessageBox.Show("존재하지않는 회원번호입니다!!");
+                MessageBox.Show("수정에 실패하였습니다. (존재하지않는 회원번호)");
                 return;
             }
             else
             {
                 memberTableAdapter.UpdateQuery(memberPw, phonNum, address, name, birthDate, memberNum);
                 //                         수정할비밀번호,전화번호, 주소,  이름,   생일, 수정될 레코드의 회원번호
-                MessageBox.Show("수정이 완료되었습니다!!");
+                MessageBox.Show("수정에 성공하였습니다.");
             }
         }
 
